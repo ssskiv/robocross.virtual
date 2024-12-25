@@ -1,0 +1,6 @@
+msg/EgoPose.idl
+msg/EgoPose.msg
+srv/PoseService.idl
+srv/PoseService.srv
+srv/PoseService_Request.msg
+srv/PoseService_Response.msg

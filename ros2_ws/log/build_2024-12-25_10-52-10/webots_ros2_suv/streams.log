@@ -1,0 +1,25 @@
+[0.516s] Invoking command in '/ulstu/ros2_ws/src/webots_ros2_suv': PYTHONPATH=/ulstu/ros2_ws/build/webots_ros2_suv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../ros2_ws/build/webots_ros2_suv build --build-base /ulstu/ros2_ws/build/webots_ros2_suv/build install --record /ulstu/ros2_ws/build/webots_ros2_suv/install.log --single-version-externally-managed install_data
+[0.718s] running egg_info
+[0.719s] writing ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/PKG-INFO
+[0.719s] writing dependency_links to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/dependency_links.txt
+[0.719s] writing entry points to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/entry_points.txt
+[0.719s] writing requirements to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/requires.txt
+[0.719s] writing top-level names to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/top_level.txt
+[0.722s] reading manifest file '../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'
+[0.725s] writing manifest file '../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'
+[0.725s] running build
+[0.726s] running build_py
+[0.726s] copying webots_ros2_suv/node_ego_controller.py -> /ulstu/ros2_ws/build/webots_ros2_suv/build/lib/webots_ros2_suv
+[0.726s] running install
+[0.727s] running install_lib
+[0.727s] copying /ulstu/ros2_ws/build/webots_ros2_suv/build/lib/webots_ros2_suv/node_ego_controller.py -> /ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv
+[0.728s] byte-compiling /ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/node_ego_controller.py to node_ego_controller.cpython-310.pyc
+[0.730s] running install_data
+[0.735s] running install_egg_info
+[0.737s] removing '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv-2023.0.1-py3.10.egg-info' (and everything under it)
+[0.737s] Copying ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info to /ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv-2023.0.1-py3.10.egg-info
+[0.738s] running install_scripts
+[0.754s] Installing node_ego_controller script to /ulstu/ros2_ws/install/webots_ros2_suv/lib/webots_ros2_suv
+[0.754s] Installing node_sensors_webots script to /ulstu/ros2_ws/install/webots_ros2_suv/lib/webots_ros2_suv
+[0.755s] writing list of installed files to '/ulstu/ros2_ws/build/webots_ros2_suv/install.log'
+[0.772s] Invoked command in '/ulstu/ros2_ws/src/webots_ros2_suv' returned '0': PYTHONPATH=/ulstu/ros2_ws/build/webots_ros2_suv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../ros2_ws/build/webots_ros2_suv build --build-base /ulstu/ros2_ws/build/webots_ros2_suv/build install --record /ulstu/ros2_ws/build/webots_ros2_suv/install.log --single-version-externally-managed install_data

@@ -1,0 +1,17 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from robot_interfaces/srv/PoseService.srv
+// generated code does not contain a copyright notice
+
+#include "robot_interfaces/msg/EgoPose.idl"
+#include "std_msgs/msg/String.idl"
+
+module robot_interfaces {
+  module srv {
+    struct PoseService_Request {
+      std_msgs::msg::String request;
+    };
+    struct PoseService_Response {
+      robot_interfaces::msg::EgoPose response;
+    };
+  };
+};

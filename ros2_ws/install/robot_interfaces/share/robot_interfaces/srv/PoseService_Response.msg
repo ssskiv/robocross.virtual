@@ -1,0 +1,2 @@
+
+robot_interfaces/EgoPose response

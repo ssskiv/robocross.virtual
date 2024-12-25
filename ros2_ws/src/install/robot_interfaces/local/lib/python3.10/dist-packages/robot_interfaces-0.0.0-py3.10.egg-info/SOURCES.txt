@@ -1,0 +1,10 @@
+setup.py
+robot_interfaces/__init__.py
+robot_interfaces.egg-info/PKG-INFO
+robot_interfaces.egg-info/SOURCES.txt
+robot_interfaces.egg-info/dependency_links.txt
+robot_interfaces.egg-info/top_level.txt
+robot_interfaces/msg/__init__.py
+robot_interfaces/msg/_ego_pose.py
+robot_interfaces/srv/__init__.py
+robot_interfaces/srv/_pose_service.py

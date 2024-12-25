@@ -1,0 +1,7 @@
+{
+  "package_name": "robot_interfaces",
+  "non_idl_tuples": [
+    "/ulstu/ros2_ws/src/robot_interfaces:msg/EgoPose.msg",
+    "/ulstu/ros2_ws/src/robot_interfaces:srv/PoseService.srv"
+  ]
+}

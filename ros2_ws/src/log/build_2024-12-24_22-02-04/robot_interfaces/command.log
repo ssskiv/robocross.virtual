@@ -1,0 +1,1 @@
+Invoking command in '/ulstu/ros2_ws/src/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake /ulstu/ros2_ws/src/robot_interfaces -DCMAKE_INSTALL_PREFIX=/ulstu/ros2_ws/src/install/robot_interfaces

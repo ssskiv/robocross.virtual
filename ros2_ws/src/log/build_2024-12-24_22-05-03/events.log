@@ -1,0 +1,548 @@
+[0.000000] (-) TimerEvent: {}
+[0.000659] (robot_interfaces) JobQueued: {'identifier': 'robot_interfaces', 'dependencies': OrderedDict()}
+[0.000714] (webots_ros2_suv) JobQueued: {'identifier': 'webots_ros2_suv', 'dependencies': OrderedDict([('robot_interfaces', '/ulstu/ros2_ws/src/install/robot_interfaces')])}
+[0.000752] (robot_interfaces) JobStarted: {'identifier': 'robot_interfaces'}
+[0.016334] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'cmake'}
+[0.016893] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'build'}
+[0.017398] (robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ulstu/ros2_ws/src/build/robot_interfaces', '--', '-j12', '-l12'], 'cwd': '/ulstu/ros2_ws/src/build/robot_interfaces', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('GIT_ASKPASS', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('BROWSER', '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh'), ('HOME', '/ulstu'), ('OLDPWD', '/ulstu/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a29e74b3-fdf2-4980-a955-0a14eb06f983.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/lib/code-server/lib/node'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/code-server/lib/vscode/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('VSCODE_PROXY_URI', 'http://localhost:31415/proxy/{{port}}/'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-21ca583a84.sock'), ('NODE_EXEC_PATH', '/usr/lib/code-server/lib/node'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ulstu/ros2_ws/src/build/robot_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.061641] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_generator_c\x1b[0m\n'}
+[0.072407] (robot_interfaces) StdoutLine: {'line': b'[  2%] Built target robot_interfaces__cpp\n'}
+[0.074466] (robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target robot_interfaces__rosidl_generator_c\n'}
+[0.084422] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[0.084609] (robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_robot_interfaces\n'}
+[0.084720] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_c\x1b[0m\n'}
+[0.084801] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[0.084913] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[0.084980] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[0.085047] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_cpp\x1b[0m\n'}
+[0.097418] (robot_interfaces) StdoutLine: {'line': b'[ 23%] Built target robot_interfaces__rosidl_typesupport_c\n'}
+[0.099566] (robot_interfaces) StdoutLine: {'line': b'[ 33%] Built target robot_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.099679] (-) TimerEvent: {}
+[0.100467] (robot_interfaces) StdoutLine: {'line': b'[ 46%] Built target robot_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.100671] (robot_interfaces) StdoutLine: {'line': b'[ 56%] Built target robot_interfaces__rosidl_typesupport_cpp\n'}
+[0.100800] (robot_interfaces) StdoutLine: {'line': b'[ 64%] Built target robot_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.102299] (robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.122783] (robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_interfaces\n'}
+[0.142501] (robot_interfaces) StdoutLine: {'line': b'[ 76%] Built target robot_interfaces__py\n'}
+[0.152420] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_generator_py\x1b[0m\n'}
+[0.167139] (robot_interfaces) StdoutLine: {'line': b'[ 84%] Built target robot_interfaces__rosidl_generator_py\n'}
+[0.177027] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[0.177202] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[0.178372] (robot_interfaces) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target robot_interfaces__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[0.191032] (robot_interfaces) StdoutLine: {'line': b'[ 94%] Built target robot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.191245] (robot_interfaces) StdoutLine: {'line': b'[ 94%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.192019] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target robot_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.199746] (-) TimerEvent: {}
+[0.292758] (robot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.293243] (robot_interfaces) StdoutLine: {'line': b'writing robot_interfaces.egg-info/PKG-INFO\n'}
+[0.293411] (robot_interfaces) StdoutLine: {'line': b'writing dependency_links to robot_interfaces.egg-info/dependency_links.txt\n'}
+[0.293531] (robot_interfaces) StdoutLine: {'line': b'writing top-level names to robot_interfaces.egg-info/top_level.txt\n'}
+[0.295089] (robot_interfaces) StdoutLine: {'line': b"reading manifest file 'robot_interfaces.egg-info/SOURCES.txt'\n"}
+[0.295538] (robot_interfaces) StdoutLine: {'line': b"writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'\n"}
+[0.299832] (-) TimerEvent: {}
+[0.317678] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_robot_interfaces_egg\n'}
+[0.330609] (robot_interfaces) CommandEnded: {'returncode': 0}
+[0.399933] (-) TimerEvent: {}
+[0.411722] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'install'}
+[0.421204] (robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ulstu/ros2_ws/src/build/robot_interfaces'], 'cwd': '/ulstu/ros2_ws/src/build/robot_interfaces', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('GIT_ASKPASS', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('BROWSER', '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh'), ('HOME', '/ulstu'), ('OLDPWD', '/ulstu/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a29e74b3-fdf2-4980-a955-0a14eb06f983.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/lib/code-server/lib/node'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/code-server/lib/vscode/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('VSCODE_PROXY_URI', 'http://localhost:31415/proxy/{{port}}/'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-21ca583a84.sock'), ('NODE_EXEC_PATH', '/usr/lib/code-server/lib/node'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ulstu/ros2_ws/src/build/robot_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.430927] (robot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.431188] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/robot_interfaces\n'}
+[0.431457] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.431619] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.431739] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/pose_service.h\n'}
+[0.431919] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.432032] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.h\n'}
+[0.432236] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__struct.h\n'}
+[0.432434] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__functions.h\n'}
+[0.432669] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__functions.c\n'}
+[0.432865] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.432970] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.433088] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__functions.c\n'}
+[0.433320] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.h\n'}
+[0.433515] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__functions.h\n'}
+[0.433715] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__struct.h\n'}
+[0.433913] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/ego_pose.h\n'}
+[0.434107] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.434453] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/library_path.sh\n'}
+[0.434667] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/library_path.dsv\n'}
+[0.434944] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so\n'}
+[0.435449] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so" to ""\n'}
+[0.435600] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.435741] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.435835] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.435981] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_fastrtps_c.h\n'}
+[0.436102] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.436233] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.436329] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.436418] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.436528] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.436934] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[0.437092] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.437217] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.437301] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.437410] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__struct.hpp\n'}
+[0.437498] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__builder.hpp\n'}
+[0.437603] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__traits.hpp\n'}
+[0.437788] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/pose_service.hpp\n'}
+[0.438043] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.438153] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/ego_pose.hpp\n'}
+[0.438294] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.438383] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__struct.hpp\n'}
+[0.438508] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__builder.hpp\n'}
+[0.438689] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__traits.hpp\n'}
+[0.438899] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.439057] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.439212] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.439311] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/dds_fastrtps\n'}
+[0.439408] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.439544] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.439668] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.439791] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.439911] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.440001] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/dds_fastrtps\n'}
+[0.440144] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.440504] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[0.440652] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.440781] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.440871] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.440988] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_introspection_c.h\n'}
+[0.441077] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.c\n'}
+[0.441225] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.441318] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.441437] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.441562] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.c\n'}
+[0.441693] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.441853] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.442310] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[0.442456] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so\n'}
+[0.442805] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so" to ""\n'}
+[0.442962] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.443064] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.443195] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.443288] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.443411] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.cpp\n'}
+[0.443557] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.443708] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.443803] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.cpp\n'}
+[0.443921] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.444132] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.444580] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[0.444659] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.445098] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[0.445197] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.sh\n'}
+[0.445372] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.dsv\n'}
+[0.445569] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info\n'}
+[0.445804] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.445996] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.446195] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.446382] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.446589] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces\n'}
+[0.446709] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/__init__.py\n'}
+[0.446897] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[0.447092] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv\n'}
+[0.447214] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/__init__.py\n'}
+[0.447408] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/_pose_service.py\n'}
+[0.447607] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/_pose_service_s.c\n'}
+[0.447812] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.448053] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.448355] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg\n'}
+[0.448471] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/__init__.py\n'}
+[0.448684] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_ego_pose.py\n'}
+[0.448880] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_ego_pose_s.c\n'}
+[0.449077] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/librobot_interfaces__rosidl_generator_py.so\n'}
+[0.449368] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.449575] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.449790] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.479203] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces'...\n"}
+[0.479381] (robot_interfaces) StdoutLine: {'line': b"Compiling '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/__init__.py'...\n"}
+[0.479460] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg'...\n"}
+[0.479537] (robot_interfaces) StdoutLine: {'line': b"Compiling '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/__init__.py'...\n"}
+[0.479613] (robot_interfaces) StdoutLine: {'line': b"Compiling '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_ego_pose.py'...\n"}
+[0.479691] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv'...\n"}
+[0.479768] (robot_interfaces) StdoutLine: {'line': b"Compiling '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/__init__.py'...\n"}
+[0.479840] (robot_interfaces) StdoutLine: {'line': b"Compiling '/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/_pose_service.py'...\n"}
+[0.482674] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.483175] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[0.483421] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.483902] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[0.484158] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.484629] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[0.484720] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so\n'}
+[0.485220] (robot_interfaces) StdoutLine: {'line': b'-- Set runtime path of "/ulstu/ros2_ws/src/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so" to ""\n'}
+[0.485356] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/msg/EgoPose.idl\n'}
+[0.485636] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/srv/PoseService.idl\n'}
+[0.485865] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/msg/EgoPose.msg\n'}
+[0.486092] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/srv/PoseService.srv\n'}
+[0.486318] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/srv/PoseService_Request.msg\n'}
+[0.486534] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/srv/PoseService_Response.msg\n'}
+[0.486824] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/ament_index/resource_index/package_run_dependencies/robot_interfaces\n'}
+[0.487112] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/ament_index/resource_index/parent_prefix_path/robot_interfaces\n'}
+[0.487356] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.sh\n'}
+[0.487580] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.487804] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/path.sh\n'}
+[0.488035] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/environment/path.dsv\n'}
+[0.488262] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/local_setup.bash\n'}
+[0.488476] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/local_setup.sh\n'}
+[0.488694] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/local_setup.zsh\n'}
+[0.488917] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/local_setup.dsv\n'}
+[0.489141] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/package.dsv\n'}
+[0.489459] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/ament_index/resource_index/packages/robot_interfaces\n'}
+[0.489745] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.489977] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.490230] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.490465] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.490700] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.490950] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.491195] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.491437] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.491666] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.491914] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.492154] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.492395] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.492626] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.492866] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.493102] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.493363] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport.cmake\n'}
+[0.493598] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.493822] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.494043] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.494282] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.494504] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.494732] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.494953] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.495181] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.495405] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig.cmake\n'}
+[0.495602] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig-version.cmake\n'}
+[0.495830] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/src/install/robot_interfaces/share/robot_interfaces/package.xml\n'}
+[0.498591] (robot_interfaces) CommandEnded: {'returncode': 0}
+[0.500008] (-) TimerEvent: {}
+[0.600182] (-) TimerEvent: {}
+[0.618001] (robot_interfaces) JobEnded: {'identifier': 'robot_interfaces', 'rc': 0}
+[0.619351] (webots_ros2_suv) JobStarted: {'identifier': 'webots_ros2_suv'}
+[0.700296] (-) TimerEvent: {}
+[0.800613] (-) TimerEvent: {}
+[0.900922] (-) TimerEvent: {}
+[1.001183] (-) TimerEvent: {}
+[1.101477] (-) TimerEvent: {}
+[1.147995] (webots_ros2_suv) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../ros2_ws/src/build/webots_ros2_suv', 'build', '--build-base', '/ulstu/ros2_ws/src/build/webots_ros2_suv/build', 'install', '--record', '/ulstu/ros2_ws/src/build/webots_ros2_suv/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ulstu/ros2_ws/src/webots_ros2_suv', 'env': {'HOSTNAME': '0f3fadfff56c', 'GIT_ASKPASS': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh', '__GLX_VENDOR_LIBRARY_NAME': 'nvidia', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '0', 'LD_LIBRARY_PATH': '/ulstu/ros2_ws/src/install/robot_interfaces/lib:/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib', 'BROWSER': '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh', 'HOME': '/ulstu', 'OLDPWD': '/ulstu/ros2_ws', 'TERM_PROGRAM_VERSION': '1.96.2', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-a29e74b3-fdf2-4980-a955-0a14eb06f983.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/usr/lib/code-server/lib/node', 'COLORTERM': 'truecolor', 'WAYLAND_DISPLAY': 'AYLAND_DISPLAY', 'COLCON_PREFIX_PATH': '/ulstu/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'USERNAME': 'default', 'TERM': 'xterm-256color', 'LIBGL_ALWAYS_INDIRECT': '0', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/usr/lib/code-server/lib/vscode/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'VSCODE_PROXY_URI': 'http://localhost:31415/proxy/{{port}}/', 'LANG': 'C.UTF-8', '__NV_PRIME_RENDER_OFFLOAD': '1', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-21ca583a84.sock', 'NODE_EXEC_PATH': '/usr/lib/code-server/lib/node', 'TERM_PROGRAM': 'vscode', 'AMENT_PREFIX_PATH': '/ulstu/ros2_ws/src/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble', 'WEBOTS_HOME': '/usr/local/webots', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/ulstu/ros2_ws/src/build/webots_ros2_suv', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ulstu/ros2_ws/src/build/webots_ros2_suv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/src/install/robot_interfaces/local/lib/python3.10/dist-packages:/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ulstu/ros2_ws/src/install/robot_interfaces:/ulstu/ros2_ws/install/robot_interfaces'}, 'shell': False}
+[1.201577] (-) TimerEvent: {}
+[1.301841] (-) TimerEvent: {}
+[1.359478] (webots_ros2_suv) StdoutLine: {'line': b'running egg_info\n'}
+[1.359926] (webots_ros2_suv) StdoutLine: {'line': b'creating ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info\n'}
+[1.360176] (webots_ros2_suv) StdoutLine: {'line': b'writing ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/PKG-INFO\n'}
+[1.360378] (webots_ros2_suv) StdoutLine: {'line': b'writing dependency_links to ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/dependency_links.txt\n'}
+[1.360554] (webots_ros2_suv) StdoutLine: {'line': b'writing entry points to ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/entry_points.txt\n'}
+[1.360772] (webots_ros2_suv) StdoutLine: {'line': b'writing requirements to ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/requires.txt\n'}
+[1.360927] (webots_ros2_suv) StdoutLine: {'line': b'writing top-level names to ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/top_level.txt\n'}
+[1.361028] (webots_ros2_suv) StdoutLine: {'line': b"writing manifest file '../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'\n"}
+[1.363241] (webots_ros2_suv) StdoutLine: {'line': b"reading manifest file '../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'\n"}
+[1.365093] (webots_ros2_suv) StdoutLine: {'line': b"writing manifest file '../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'\n"}
+[1.365258] (webots_ros2_suv) StdoutLine: {'line': b'running build\n'}
+[1.365345] (webots_ros2_suv) StdoutLine: {'line': b'running build_py\n'}
+[1.365459] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/build/webots_ros2_suv/build\n'}
+[1.365575] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib\n'}
+[1.365685] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv\n'}
+[1.365818] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/__init__.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv\n'}
+[1.365905] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/node_ego_controller.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv\n'}
+[1.366031] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/suv_driver.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv\n'}
+[1.366175] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/node_sensors_webots.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv\n'}
+[1.366380] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.366490] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/timeit.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.366622] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/world_model.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.366776] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/__init__.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.366911] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/car_model.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.367064] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/coords_transformer.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.367218] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/orientation.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.367364] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/map_utils.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.367512] (webots_ros2_suv) StdoutLine: {'line': b'copying webots_ros2_suv/lib/map_server.py -> /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib\n'}
+[1.367853] (webots_ros2_suv) StdoutLine: {'line': b'running install\n'}
+[1.368106] (webots_ros2_suv) StdoutLine: {'line': b'running install_lib\n'}
+[1.368727] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv\n'}
+[1.368853] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/__init__.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv\n'}
+[1.368994] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/node_ego_controller.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv\n'}
+[1.369155] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/suv_driver.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv\n'}
+[1.369369] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.369556] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/timeit.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.369681] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/world_model.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.369798] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/__init__.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.369913] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/car_model.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.370034] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/coords_transformer.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.370172] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/orientation.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.370294] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/map_utils.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.370408] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/lib/map_server.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib\n'}
+[1.370531] (webots_ros2_suv) StdoutLine: {'line': b'copying /ulstu/ros2_ws/src/build/webots_ros2_suv/build/lib/webots_ros2_suv/node_sensors_webots.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv\n'}
+[1.370962] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/__init__.py to __init__.cpython-310.pyc\n'}
+[1.371214] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/node_ego_controller.py to node_ego_controller.cpython-310.pyc\n'}
+[1.372208] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/suv_driver.py to suv_driver.cpython-310.pyc\n'}
+[1.372558] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/timeit.py to timeit.cpython-310.pyc\n'}
+[1.372881] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/world_model.py to world_model.cpython-310.pyc\n'}
+[1.373368] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/__init__.py to __init__.cpython-310.pyc\n'}
+[1.373538] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/car_model.py to car_model.cpython-310.pyc\n'}
+[1.373834] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/coords_transformer.py to coords_transformer.cpython-310.pyc\n'}
+[1.374817] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/orientation.py to orientation.cpython-310.pyc\n'}
+[1.375329] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/map_utils.py to map_utils.cpython-310.pyc\n'}
+[1.375918] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/lib/map_server.py to map_server.cpython-310.pyc\n'}
+[1.377045] (webots_ros2_suv) StdoutLine: {'line': b'byte-compiling /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/node_sensors_webots.py to node_sensors_webots.cpython-310.pyc\n'}
+[1.377753] (webots_ros2_suv) StdoutLine: {'line': b'running install_data\n'}
+[1.377879] (webots_ros2_suv) StdoutLine: {'line': b'copying package.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv\n'}
+[1.378004] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server\n'}
+[1.378127] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist\n'}
+[1.378252] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/dist/index.html -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist/\n'}
+[1.378385] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist/assets\n'}
+[1.378478] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/dist/assets/index.ba967dfc.css -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist/assets\n'}
+[1.378656] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/dist/assets/index.c7d40b72.js -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist/assets\n'}
+[1.379047] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/dist/assets/index.c7d40b72.js.map -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/dist/assets\n'}
+[1.380836] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/launch\n'}
+[1.380972] (webots_ros2_suv) StdoutLine: {'line': b'copying launch/robot_launch.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/launch/\n'}
+[1.381091] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds\n'}
+[1.381246] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/robocross_gazelle.wbt -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/\n'}
+[1.381435] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.381597] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.edg.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.381729] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.rou.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.381878] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.trip.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.382116] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.rou.alt.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.382489] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.net.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.382770] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.sumocfg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.382904] (webots_ros2_suv) StdoutLine: {'line': b'copying worlds/ulstu_net/sumo.nod.xml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/worlds/ulstu_net\n'}
+[1.383019] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource\n'}
+[1.383187] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/gazelle.urdf -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.383379] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/bmw.urdf -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.383566] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/tesla_webots.urdf -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.383740] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/webots_ros2_suv -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.383952] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/suv1.urdf -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.384161] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/suv.urdf -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/\n'}
+[1.384403] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/lane_line_model\n'}
+[1.384573] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/lane_line_model/config.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/lane_line_model\n'}
+[1.384751] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/weights\n'}
+[1.384918] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/weights/model-ep50-signs16\n'}
+[1.385082] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/weights/model-ep50-signs16/labels.txt -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/weights/model-ep50-signs16\n'}
+[1.385294] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.385472] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_24_n90.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.385628] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/5_19_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.385784] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_18_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.385957] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_24_n40.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386090] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/1_31.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386288] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/used_signs.txt -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386428] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/2_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386543] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386654] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/1_22.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386761] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_24_n60.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386853] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/1_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.386961] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_28.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387067] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/4_1_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387180] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/5_5.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387310] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/4_3.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387474] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/6_3_2.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387592] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/2_4.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387700] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/3_24_n30.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387809] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/6_4.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.387919] (webots_ros2_suv) StdoutLine: {'line': b'copying resource/signs_icon/7_4.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/resource/signs_icon\n'}
+[1.388026] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config\n'}
+[1.388143] (webots_ros2_suv) StdoutLine: {'line': b'copying config/config.rviz -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/\n'}
+[1.388255] (webots_ros2_suv) StdoutLine: {'line': b'copying config/main.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/\n'}
+[1.388367] (webots_ros2_suv) StdoutLine: {'line': b'copying config/map_config.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/\n'}
+[1.388473] (webots_ros2_suv) StdoutLine: {'line': b'copying config/project_settings.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/\n'}
+[1.388580] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/simulator\n'}
+[1.388686] (webots_ros2_suv) StdoutLine: {'line': b'copying config/simulator/global_coords.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/simulator\n'}
+[1.388797] (webots_ros2_suv) StdoutLine: {'line': b'copying config/simulator/map_config.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/simulator\n'}
+[1.388954] (webots_ros2_suv) StdoutLine: {'line': b'copying config/simulator/devices_topics.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/simulator\n'}
+[1.389049] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/global_maps\n'}
+[1.389155] (webots_ros2_suv) StdoutLine: {'line': b'copying config/global_maps/robocross.geojson -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/global_maps\n'}
+[1.389261] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/ego_states\n'}
+[1.389362] (webots_ros2_suv) StdoutLine: {'line': b'copying config/ego_states/robocross.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/config/ego_states\n'}
+[1.389455] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/maps\n'}
+[1.389548] (webots_ros2_suv) StdoutLine: {'line': b'copying maps/suv_world.yaml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/maps/\n'}
+[1.389640] (webots_ros2_suv) StdoutLine: {'line': b'copying maps/suv_world.pgm -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/maps/\n'}
+[1.392483] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/index.html -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.392642] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/style.css -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.392834] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/main.js -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.392964] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/readme.md -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.393103] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/package.json -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.393227] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/package-lock.json -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.393371] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/vite.config.js -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/\n'}
+[1.393508] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/.github\n'}
+[1.393675] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/.github/dependabot.yml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/.github\n'}
+[1.393841] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/.github/workflows\n'}
+[1.393978] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/.github/workflows/build.yml -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/.github/workflows\n'}
+[1.394075] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/libs\n'}
+[1.394194] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/libs/jquery-ui.min.js -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/libs\n'}
+[1.394341] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/libs/jquery-3.7.0.min.js -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/libs\n'}
+[1.394498] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/libs/bootstrap.min.css -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/libs\n'}
+[1.394636] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/libs/jquery-ui.min.css -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/libs\n'}
+[1.394784] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/log\n'}
+[1.394947] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/log/latest_build -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/log\n'}
+[1.395099] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/log/COLCON_IGNORE -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/log\n'}
+[1.395319] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/log/latest -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/log\n'}
+[1.395473] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.395630] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/setup.zsh -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.395796] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/local_setup.zsh -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.395948] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/local_setup.sh -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396120] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/local_setup.ps1 -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396300] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/_local_setup_util_sh.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396455] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/setup.bash -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396627] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/COLCON_IGNORE -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396785] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/setup.ps1 -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.396958] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/setup.sh -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.397090] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/_local_setup_util_ps1.py -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.397256] (webots_ros2_suv) StdoutLine: {'line': b'copying map-server/install/local_setup.bash -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/map-server/install\n'}
+[1.397420] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos\n'}
+[1.397580] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazAvionMesh.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.397723] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/AckermannVehicle.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.397864] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Sprayer.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398008] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Amazon.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398179] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/VehicleWheel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398301] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/TumanMesh.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398470] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazAvionWheel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398603] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazPatriotInterior.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398767] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/TumanInterior.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.398905] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GazelleNextMesh.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399049] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GiveWaySign.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399237] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Kamaz.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399386] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazAvionInterior.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399550] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GazelleNextInterior.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399695] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/PlasticBarrel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399865] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Car.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.399963] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazAvionAmazon.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400073] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/TumanWheel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400238] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Tuman.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400387] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazAvionSprayer.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400518] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GazelleNextWheel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400633] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Cow.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400753] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazPatriotMesh.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.400943] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/VehicleLights.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401083] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GazelleNext.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401213] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/Human.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401313] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazPatriot.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401408] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/MainRoadSign.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401556] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/UazPatriotWheel.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401655] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/GenericTireAppearance.proto -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/\n'}
+[1.401759] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.401847] (-) TimerEvent: {}
+[1.401962] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_dark_plastic_base_color.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402099] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_logo_normal.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402223] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_interior_speedometer_without_needles.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402320] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_interior_speedometer.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402411] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_logo_metalness.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402504] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_logo_roughness.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402645] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/uaz_logo.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402737] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_plastic_roughness.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402830] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_interior_seats.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.402919] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_interior_windshield_dust.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.403533] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_interior_radio_display.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.403692] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_plastic_occlusion.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.404092] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_logo_base_color.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.404245] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_light_plastic_base_color.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.404579] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/textures/bmw_plastic_normal.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/textures\n'}
+[1.405559] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/icons\n'}
+[1.405728] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/icons/BmwX5.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/icons\n'}
+[1.405906] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.406038] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/vehiclelights128_PNG_001.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.406192] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/bruisermazpokr_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.406378] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/frame_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.406481] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/knopka2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.406577] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/UazAvionMesh.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.413615] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/greadddd_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.413798] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/dnishe2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.413921] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/reshnozh_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.414049] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/podbamp1_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.414186] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/UazAvionLights.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.414345] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/crome2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.414509] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/uaz_mesh.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.419608] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/GazelleNextBody.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.424211] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/remap_body_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.424448] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/UazAvionInterior.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.427960] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/TumanInterior.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.429193] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/UazAvionBody.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.431318] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/kabina_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.431501] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/_44_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.431673] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastikx_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.431856] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/sina2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.432011] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/vehiclelights128_PNG_002.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.432173] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/GazelleNextInterior.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.440565] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/TumanYellow.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.440801] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_4.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.441380] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/bruisermazdisk_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.441552] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/podogrevass2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.441702] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/glass_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.441860] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_5.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442026] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/parabrisa_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442193] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/metaleng_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442352] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/lampasalon_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442505] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/knopka3_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442653] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_0.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.442993] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/cats_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.443153] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/TumanBlack.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.449827] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/shader_rear_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.450013] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/bbasic_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.450202] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_3.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.450999] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/black_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.451194] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastikpatr2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.451375] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Cow.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.452149] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/pribror_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.452344] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_1.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.452502] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/UazAvionPlastic.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.454128] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/dvigdvig_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.454299] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/GazelleNextLights.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.455392] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/leftflash_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.455603] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/odezhda3_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.455754] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_7.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.455916] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/chrom_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456095] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/podogrevass_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456290] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/bukvy_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456464] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/fara_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456616] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastik_7_0_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456796] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/rightflash_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.456974] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/fabric_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.457163] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/6_map_9.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.457352] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/2k_1.png.002.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.460628] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/uaz_interior.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.463229] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/vehiclelights128_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.463398] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/GazelleNextPlastic.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.472868] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/patrtorpeda_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.473040] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/ElonMusk.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.477089] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/kovrik2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.477273] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/knopka1_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.477455] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/intx_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.477634] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/podbamp2_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.477814] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/patrgps_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.478001] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/kovrik_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.478198] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/TumanOrange.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.478969] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/excv_1_PNG.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.479154] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/GazelleNextMesh.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models\n'}
+[1.494942] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel\n'}
+[1.495145] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastic_barrel/plastic_barrel.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel\n'}
+[1.495417] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel/textures\n'}
+[1.495517] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastic_barrel/textures/normal_map.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel/textures\n'}
+[1.500162] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastic_barrel/textures/base_map.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel/textures\n'}
+[1.501090] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastic_barrel/textures/metallic_map.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel/textures\n'}
+[1.501558] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/plastic_barrel/textures/roughness_map.jpg -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/plastic_barrel/textures\n'}
+[1.501915] (-) TimerEvent: {}
+[1.502873] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.502993] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerBlack.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.503154] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerGreen.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.503311] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerGlossy.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.503504] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerYellow.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.503786] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerMesh.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.504209] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Sprayer/SprayerRed.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Sprayer\n'}
+[1.504462] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Amazon\n'}
+[1.504574] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Amazon/AmazonBlack.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Amazon\n'}
+[1.504711] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Amazon/AmazonGlossy.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Amazon\n'}
+[1.504889] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Amazon/AmazonGreen.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Amazon\n'}
+[1.505037] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/Amazon/AmazonOrange.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/Amazon\n'}
+[1.505233] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs\n'}
+[1.505353] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/main_road_sign.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs\n'}
+[1.505492] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/give_way_sign.dae -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs\n'}
+[1.505670] (webots_ros2_suv) StdoutLine: {'line': b'creating /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs/textures\n'}
+[1.505784] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/textures/normal_map.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs/textures\n'}
+[1.514650] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/textures/base_map.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs/textures\n'}
+[1.516254] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/textures/roughness_map.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs/textures\n'}
+[1.516793] (webots_ros2_suv) StdoutLine: {'line': b'copying protos/models/signs/textures/metallic_map.png -> /ulstu/ros2_ws/src/install/webots_ros2_suv/share/webots_ros2_suv/protos/models/signs/textures\n'}
+[1.517107] (webots_ros2_suv) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.518749] (webots_ros2_suv) StdoutLine: {'line': b'Copying ../../ros2_ws/src/build/webots_ros2_suv/webots_ros2_suv.egg-info to /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv-2023.0.1-py3.10.egg-info\n'}
+[1.519869] (webots_ros2_suv) StdoutLine: {'line': b'running install_scripts\n'}
+[1.536222] (webots_ros2_suv) StdoutLine: {'line': b'Installing node_ego_controller script to /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/webots_ros2_suv\n'}
+[1.536385] (webots_ros2_suv) StdoutLine: {'line': b'Installing node_sensors_webots script to /ulstu/ros2_ws/src/install/webots_ros2_suv/lib/webots_ros2_suv\n'}
+[1.536945] (webots_ros2_suv) StdoutLine: {'line': b"writing list of installed files to '/ulstu/ros2_ws/src/build/webots_ros2_suv/install.log'\n"}
+[1.553663] (webots_ros2_suv) CommandEnded: {'returncode': 0}
+[1.565301] (webots_ros2_suv) JobEnded: {'identifier': 'webots_ros2_suv', 'rc': 0}
+[1.566182] (-) EventReactorShutdown: {}

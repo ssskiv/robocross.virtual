@@ -1,0 +1,123 @@
+[0.000000] (-) TimerEvent: {}
+[0.000232] (pcl_tutorial) JobQueued: {'identifier': 'pcl_tutorial', 'dependencies': OrderedDict()}
+[0.000268] (robot_interfaces) JobQueued: {'identifier': 'robot_interfaces', 'dependencies': OrderedDict()}
+[0.000291] (webots_ros2_suv) JobQueued: {'identifier': 'webots_ros2_suv', 'dependencies': OrderedDict([('robot_interfaces', '/ulstu/ros2_ws/src/install/robot_interfaces')])}
+[0.000315] (robot_interfaces) JobStarted: {'identifier': 'robot_interfaces'}
+[0.013866] (pcl_tutorial) JobStarted: {'identifier': 'pcl_tutorial'}
+[0.018067] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'cmake'}
+[0.018231] (robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '/ulstu/ros2_ws/src/robot_interfaces', '-DCMAKE_INSTALL_PREFIX=/ulstu/ros2_ws/src/install/robot_interfaces'], 'cwd': '/ulstu/ros2_ws/src/build/robot_interfaces', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('GIT_ASKPASS', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('BROWSER', '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh'), ('HOME', '/ulstu'), ('OLDPWD', '/ulstu/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a29e74b3-fdf2-4980-a955-0a14eb06f983.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/lib/code-server/lib/node'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/code-server/lib/vscode/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('VSCODE_PROXY_URI', 'http://localhost:31415/proxy/{{port}}/'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-21ca583a84.sock'), ('NODE_EXEC_PATH', '/usr/lib/code-server/lib/node'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ulstu/ros2_ws/src/build/robot_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.021830] (pcl_tutorial) JobProgress: {'identifier': 'pcl_tutorial', 'progress': 'cmake'}
+[0.022470] (pcl_tutorial) Command: {'cmd': ['/usr/bin/cmake', '/ulstu/ros2_ws/src/pcl_tutorial/pcl_tutorial', '-DCMAKE_INSTALL_PREFIX=/ulstu/ros2_ws/src/install/pcl_tutorial'], 'cwd': '/ulstu/ros2_ws/src/build/pcl_tutorial', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('GIT_ASKPASS', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass.sh'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('BROWSER', '/usr/lib/code-server/lib/vscode/bin/helpers/browser.sh'), ('HOME', '/ulstu'), ('OLDPWD', '/ulstu/ros2_ws'), ('TERM_PROGRAM_VERSION', '1.96.2'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-a29e74b3-fdf2-4980-a955-0a14eb06f983.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/lib/code-server/lib/vscode/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/lib/code-server/lib/node'), ('COLORTERM', 'truecolor'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm-256color'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/code-server/lib/vscode/bin/remote-cli:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('VSCODE_PROXY_URI', 'http://localhost:31415/proxy/{{port}}/'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/vscode-git-21ca583a84.sock'), ('NODE_EXEC_PATH', '/usr/lib/code-server/lib/node'), ('TERM_PROGRAM', 'vscode'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/ulstu/ros2_ws/src/build/pcl_tutorial'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.072221] (robot_interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.074148] (pcl_tutorial) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099427] (-) TimerEvent: {}
+[0.122568] (robot_interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.124718] (pcl_tutorial) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.129303] (robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.131684] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.193256] (robot_interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.194988] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.199483] (-) TimerEvent: {}
+[0.199613] (robot_interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.199778] (robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.200101] (robot_interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.201371] (pcl_tutorial) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.201602] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.201925] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.202846] (robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.204664] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.277928] (robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.278280] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.284398] (robot_interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.284656] (robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.285034] (robot_interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.286046] (pcl_tutorial) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.286292] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.286672] (pcl_tutorial) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.288693] (robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.289910] (pcl_tutorial) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299546] (-) TimerEvent: {}
+[0.399720] (-) TimerEvent: {}
+[0.421790] (robot_interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.431834] (pcl_tutorial) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.499820] (-) TimerEvent: {}
+[0.558549] (robot_interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[0.567733] (pcl_tutorial) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.599910] (-) TimerEvent: {}
+[0.627854] (pcl_tutorial) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.635586] (pcl_tutorial) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.646606] (pcl_tutorial) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.648966] (robot_interfaces) StdoutLine: {'line': b'-- Found rclpy: 3.3.14 (/opt/ros/humble/share/rclpy/cmake)\n'}
+[0.653134] (robot_interfaces) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.660363] (pcl_tutorial) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.679210] (pcl_tutorial) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.699972] (-) TimerEvent: {}
+[0.712943] (robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.720352] (robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.730423] (robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.732215] (pcl_tutorial) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.736037] (pcl_tutorial) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[0.744273] (robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.758617] (pcl_tutorial) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[0.763237] (robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.771231] (pcl_tutorial) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.792278] (robot_interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.800049] (-) TimerEvent: {}
+[0.841395] (pcl_tutorial) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.841581] (pcl_tutorial) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.900154] (-) TimerEvent: {}
+[0.909479] (pcl_tutorial) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.910292] (pcl_tutorial) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.967866] (pcl_tutorial) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.997411] (pcl_tutorial) StdoutLine: {'line': b'-- Found visualization_msgs: 4.2.4 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.999055] (robot_interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.000213] (-) TimerEvent: {}
+[1.016886] (pcl_tutorial) StdoutLine: {'line': b'-- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)\n'}
+[1.032430] (pcl_tutorial) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.100320] (-) TimerEvent: {}
+[1.155326] (pcl_tutorial) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:27 (find_package):\n'}
+[1.155596] (pcl_tutorial) StderrLine: {'line': b'  By not providing "Findpcl_ros.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[1.155705] (pcl_tutorial) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "pcl_ros", but\n'}
+[1.155795] (pcl_tutorial) StderrLine: {'line': b'  CMake did not find one.\n'}
+[1.155881] (pcl_tutorial) StderrLine: {'line': b'\n'}
+[1.155965] (pcl_tutorial) StderrLine: {'line': b'  Could not find a package configuration file provided by "pcl_ros" with any\n'}
+[1.156059] (pcl_tutorial) StderrLine: {'line': b'  of the following names:\n'}
+[1.156142] (pcl_tutorial) StderrLine: {'line': b'\n'}
+[1.156225] (pcl_tutorial) StderrLine: {'line': b'    pcl_rosConfig.cmake\n'}
+[1.156307] (pcl_tutorial) StderrLine: {'line': b'    pcl_ros-config.cmake\n'}
+[1.156390] (pcl_tutorial) StderrLine: {'line': b'\n'}
+[1.156474] (pcl_tutorial) StderrLine: {'line': b'  Add the installation prefix of "pcl_ros" to CMAKE_PREFIX_PATH or set\n'}
+[1.156576] (pcl_tutorial) StderrLine: {'line': b'  "pcl_ros_DIR" to a directory containing one of the above files.  If\n'}
+[1.156662] (pcl_tutorial) StderrLine: {'line': b'  "pcl_ros" provides a separate development package or SDK, be sure it has\n'}
+[1.156745] (pcl_tutorial) StderrLine: {'line': b'  been installed.\n'}
+[1.156827] (pcl_tutorial) StderrLine: {'line': b'\n'}
+[1.156909] (pcl_tutorial) StderrLine: {'line': b'\x1b[0m\n'}
+[1.156992] (pcl_tutorial) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.157086] (pcl_tutorial) StdoutLine: {'line': b'See also "/ulstu/ros2_ws/src/build/pcl_tutorial/CMakeFiles/CMakeOutput.log".\n'}
+[1.162223] (pcl_tutorial) CommandEnded: {'returncode': 1}
+[1.189342] (pcl_tutorial) JobEnded: {'identifier': 'pcl_tutorial', 'rc': 1}
+[1.200428] (-) TimerEvent: {}
+[1.300760] (-) TimerEvent: {}
+[1.385340] (robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.400833] (-) TimerEvent: {}
+[1.501091] (-) TimerEvent: {}
+[1.546227] (robot_interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.568998] (robot_interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.574643] (robot_interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.598889] (robot_interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.599055] (robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.599119] (robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.599177] (robot_interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.601140] (-) TimerEvent: {}
+[1.618895] (robot_interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.677748] (robot_interfaces) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[1.678817] (robot_interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.679613] (robot_interfaces) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[1.681785] (robot_interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.689674] (robot_interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.701219] (-) TimerEvent: {}
+[1.730015] (robot_interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[1.733270] (robot_interfaces) StdoutLine: {'line': b'-- Build files have been written to: /ulstu/ros2_ws/src/build/robot_interfaces\n'}
+[1.739452] (robot_interfaces) JobEnded: {'identifier': 'robot_interfaces', 'rc': 'SIGINT'}
+[1.749946] (webots_ros2_suv) JobSkipped: {'identifier': 'webots_ros2_suv'}
+[1.750093] (-) EventReactorShutdown: {}

@@ -1,0 +1,225 @@
+[0.000000] (-) TimerEvent: {}
+[0.000486] (robot_interfaces) JobQueued: {'identifier': 'robot_interfaces', 'dependencies': OrderedDict()}
+[0.000542] (webots_ros2_suv) JobQueued: {'identifier': 'webots_ros2_suv', 'dependencies': OrderedDict([('robot_interfaces', '/ulstu/ros2_ws/install/robot_interfaces')])}
+[0.000582] (robot_interfaces) JobStarted: {'identifier': 'robot_interfaces'}
+[0.014233] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'cmake'}
+[0.014761] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'build'}
+[0.015351] (robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/ulstu/ros2_ws/build/robot_interfaces', '--', '-j12', '-l12'], 'cwd': '/ulstu/ros2_ws/build/robot_interfaces', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('HOME', '/ulstu'), ('ROS_PYTHON_VERSION', '3'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('PWD', '/ulstu/ros2_ws/build/robot_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.071217] (robot_interfaces) StdoutLine: {'line': b'[  2%] Built target robot_interfaces__cpp\n'}
+[0.072459] (robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target robot_interfaces__rosidl_generator_c\n'}
+[0.082299] (robot_interfaces) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_robot_interfaces\n'}
+[0.094743] (robot_interfaces) StdoutLine: {'line': b'[ 23%] Built target robot_interfaces__rosidl_typesupport_c\n'}
+[0.095359] (robot_interfaces) StdoutLine: {'line': b'[ 41%] Built target robot_interfaces__rosidl_typesupport_introspection_cpp\n'}
+[0.095456] (robot_interfaces) StdoutLine: {'line': b'[ 43%] Built target robot_interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[0.096675] (robot_interfaces) StdoutLine: {'line': b'[ 53%] Built target robot_interfaces__rosidl_typesupport_cpp\n'}
+[0.096910] (robot_interfaces) StdoutLine: {'line': b'[ 64%] Built target robot_interfaces__rosidl_typesupport_introspection_c\n'}
+[0.097216] (robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c\n'}
+[0.099633] (-) TimerEvent: {}
+[0.116227] (robot_interfaces) StdoutLine: {'line': b'[ 74%] Built target robot_interfaces\n'}
+[0.134828] (robot_interfaces) StdoutLine: {'line': b'[ 76%] Built target robot_interfaces__py\n'}
+[0.155330] (robot_interfaces) StdoutLine: {'line': b'[ 84%] Built target robot_interfaces__rosidl_generator_py\n'}
+[0.178203] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target robot_interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[0.178386] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target robot_interfaces__rosidl_typesupport_c__pyext\n'}
+[0.178458] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.199747] (-) TimerEvent: {}
+[0.289712] (robot_interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[0.290173] (robot_interfaces) StdoutLine: {'line': b'writing robot_interfaces.egg-info/PKG-INFO\n'}
+[0.290347] (robot_interfaces) StdoutLine: {'line': b'writing dependency_links to robot_interfaces.egg-info/dependency_links.txt\n'}
+[0.290479] (robot_interfaces) StdoutLine: {'line': b'writing top-level names to robot_interfaces.egg-info/top_level.txt\n'}
+[0.292013] (robot_interfaces) StdoutLine: {'line': b"reading manifest file 'robot_interfaces.egg-info/SOURCES.txt'\n"}
+[0.292473] (robot_interfaces) StdoutLine: {'line': b"writing manifest file 'robot_interfaces.egg-info/SOURCES.txt'\n"}
+[0.299806] (-) TimerEvent: {}
+[0.314877] (robot_interfaces) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_robot_interfaces_egg\n'}
+[0.329251] (robot_interfaces) CommandEnded: {'returncode': 0}
+[0.399885] (-) TimerEvent: {}
+[0.408435] (robot_interfaces) JobProgress: {'identifier': 'robot_interfaces', 'progress': 'install'}
+[0.417590] (robot_interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/ulstu/ros2_ws/build/robot_interfaces'], 'cwd': '/ulstu/ros2_ws/build/robot_interfaces', 'env': OrderedDict([('HOSTNAME', '0f3fadfff56c'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LIBGL_ALWAYS_SOFTWARE', '0'), ('LD_LIBRARY_PATH', '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib'), ('HOME', '/ulstu'), ('ROS_PYTHON_VERSION', '3'), ('WAYLAND_DISPLAY', 'AYLAND_DISPLAY'), ('COLCON_PREFIX_PATH', '/ulstu/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('NVIDIA_DRIVER_CAPABILITIES', 'all'), ('USERNAME', 'default'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('DISPLAY', ':1'), ('LANG', 'C.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble'), ('WEBOTS_HOME', '/usr/local/webots'), ('PWD', '/ulstu/ros2_ws/build/robot_interfaces'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/ulstu/ros2_ws/install/robot_interfaces:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble')]), 'shell': False}
+[0.426605] (robot_interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.426716] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/ament_index/resource_index/rosidl_interfaces/robot_interfaces\n'}
+[0.426810] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.426912] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.426970] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/pose_service.h\n'}
+[0.427025] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.427138] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.h\n'}
+[0.427194] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__struct.h\n'}
+[0.427249] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__functions.h\n'}
+[0.427302] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__functions.c\n'}
+[0.427356] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.427410] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.427495] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__functions.c\n'}
+[0.427608] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.h\n'}
+[0.427668] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__functions.h\n'}
+[0.427753] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__struct.h\n'}
+[0.427813] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/ego_pose.h\n'}
+[0.427862] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.427911] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/library_path.sh\n'}
+[0.427985] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/library_path.dsv\n'}
+[0.428075] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_c.so\n'}
+[0.428129] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.428181] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.428234] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.428321] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_fastrtps_c.h\n'}
+[0.428417] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.428467] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.428520] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_fastrtps_c.h\n'}
+[0.428574] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.428659] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[0.428766] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.428825] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.428909] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.428998] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__struct.hpp\n'}
+[0.429057] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__builder.hpp\n'}
+[0.429168] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__traits.hpp\n'}
+[0.429226] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/pose_service.hpp\n'}
+[0.429281] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.429378] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/ego_pose.hpp\n'}
+[0.429433] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.429526] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__struct.hpp\n'}
+[0.429578] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__builder.hpp\n'}
+[0.429632] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__traits.hpp\n'}
+[0.429693] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.429791] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.429840] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.429888] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/dds_fastrtps\n'}
+[0.429936] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.430016] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.430067] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.430115] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.430164] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.430219] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/dds_fastrtps\n'}
+[0.430273] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.430358] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.430473] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.430550] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.430606] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_introspection_c.h\n'}
+[0.430660] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.c\n'}
+[0.430765] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.430839] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.430893] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.430943] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.c\n'}
+[0.430991] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_introspection_c.h\n'}
+[0.431039] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_c.so\n'}
+[0.431168] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_c.so\n'}
+[0.431359] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces\n'}
+[0.431456] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv\n'}
+[0.431511] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail\n'}
+[0.431607] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.431680] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/srv/detail/pose_service__type_support.cpp\n'}
+[0.431790] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg\n'}
+[0.431842] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail\n'}
+[0.431891] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__type_support.cpp\n'}
+[0.431938] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/include/robot_interfaces/robot_interfaces/msg/detail/ego_pose__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.432011] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[0.432329] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_typesupport_cpp.so\n'}
+[0.432540] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.sh\n'}
+[0.432649] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/pythonpath.dsv\n'}
+[0.432745] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info\n'}
+[0.432799] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.432985] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.433207] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.433430] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.433680] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces\n'}
+[0.433796] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/__init__.py\n'}
+[0.433900] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[0.433961] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv\n'}
+[0.434061] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/__init__.py\n'}
+[0.434119] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/_pose_service.py\n'}
+[0.434174] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv/_pose_service_s.c\n'}
+[0.434228] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.434350] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.434407] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg\n'}
+[0.434461] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/__init__.py\n'}
+[0.434515] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_ego_pose.py\n'}
+[0.434569] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg/_ego_pose_s.c\n'}
+[0.434622] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/librobot_interfaces__rosidl_generator_py.so\n'}
+[0.434676] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.434783] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/_robot_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.434836] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.460747] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces'...\n"}
+[0.460950] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/msg'...\n"}
+[0.461048] (robot_interfaces) StdoutLine: {'line': b"Listing '/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/srv'...\n"}
+[0.464092] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.464485] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.464870] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages/robot_interfaces/robot_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.465251] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/lib/librobot_interfaces__rosidl_generator_py.so\n'}
+[0.465479] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/msg/EgoPose.idl\n'}
+[0.465633] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/srv/PoseService.idl\n'}
+[0.465865] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/msg/EgoPose.msg\n'}
+[0.466074] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/srv/PoseService.srv\n'}
+[0.466194] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/srv/PoseService_Request.msg\n'}
+[0.466308] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/srv/PoseService_Response.msg\n'}
+[0.466491] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/ament_index/resource_index/package_run_dependencies/robot_interfaces\n'}
+[0.466588] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/ament_index/resource_index/parent_prefix_path/robot_interfaces\n'}
+[0.466715] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.sh\n'}
+[0.466903] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/ament_prefix_path.dsv\n'}
+[0.467018] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/path.sh\n'}
+[0.467128] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/environment/path.dsv\n'}
+[0.467237] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/local_setup.bash\n'}
+[0.467345] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/local_setup.sh\n'}
+[0.467452] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/local_setup.zsh\n'}
+[0.467561] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/local_setup.dsv\n'}
+[0.467806] (robot_interfaces) StdoutLine: {'line': b'-- Installing: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/package.dsv\n'}
+[0.467956] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/ament_index/resource_index/packages/robot_interfaces\n'}
+[0.468069] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport.cmake\n'}
+[0.468276] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.468438] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.468630] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.468786] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_cppExport.cmake\n'}
+[0.468884] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.468977] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.469069] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.469160] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.469251] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport.cmake\n'}
+[0.469342] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.469433] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.469533] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.469626] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[0.469732] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.469833] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport.cmake\n'}
+[0.469926] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/export_robot_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.470019] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[0.470111] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.470203] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.470296] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.470388] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.470481] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.470807] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.471275] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig.cmake\n'}
+[0.471530] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/cmake/robot_interfacesConfig-version.cmake\n'}
+[0.471880] (robot_interfaces) StdoutLine: {'line': b'-- Up-to-date: /ulstu/ros2_ws/install/robot_interfaces/share/robot_interfaces/package.xml\n'}
+[0.472184] (robot_interfaces) CommandEnded: {'returncode': 0}
+[0.499965] (-) TimerEvent: {}
+[0.579274] (robot_interfaces) JobEnded: {'identifier': 'robot_interfaces', 'rc': 0}
+[0.580339] (webots_ros2_suv) JobStarted: {'identifier': 'webots_ros2_suv'}
+[0.599980] (-) TimerEvent: {}
+[0.700176] (-) TimerEvent: {}
+[0.800632] (-) TimerEvent: {}
+[0.900926] (-) TimerEvent: {}
+[1.001212] (-) TimerEvent: {}
+[1.090036] (webots_ros2_suv) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../ros2_ws/build/webots_ros2_suv', 'build', '--build-base', '/ulstu/ros2_ws/build/webots_ros2_suv/build', 'install', '--record', '/ulstu/ros2_ws/build/webots_ros2_suv/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/ulstu/ros2_ws/src/webots_ros2_suv', 'env': {'HOSTNAME': '0f3fadfff56c', '__GLX_VENDOR_LIBRARY_NAME': 'nvidia', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '0', 'LD_LIBRARY_PATH': '/ulstu/ros2_ws/install/robot_interfaces/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/lib/wsl/lib', 'HOME': '/ulstu', 'ROS_PYTHON_VERSION': '3', 'WAYLAND_DISPLAY': 'AYLAND_DISPLAY', 'COLCON_PREFIX_PATH': '/ulstu/ros2_ws/install', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'NVIDIA_DRIVER_CAPABILITIES': 'all', 'USERNAME': 'default', 'TERM': 'xterm', 'LIBGL_ALWAYS_INDIRECT': '0', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':1', 'LANG': 'C.UTF-8', '__NV_PRIME_RENDER_OFFLOAD': '1', 'RMW_IMPLEMENTATION': 'rmw_cyclonedds_cpp', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/ulstu/ros2_ws/install/webots_ros2_suv:/ulstu/ros2_ws/install/robot_interfaces:/opt/ros/humble', 'WEBOTS_HOME': '/usr/local/webots', 'PWD': '/ulstu/ros2_ws/build/webots_ros2_suv', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/ulstu/ros2_ws/build/webots_ros2_suv/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages:/ulstu/ros2_ws/install/robot_interfaces/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/ulstu/ros2_ws/install/robot_interfaces'}, 'shell': False}
+[1.101275] (-) TimerEvent: {}
+[1.201468] (-) TimerEvent: {}
+[1.284545] (webots_ros2_suv) StdoutLine: {'line': b'running egg_info\n'}
+[1.284994] (webots_ros2_suv) StdoutLine: {'line': b'writing ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/PKG-INFO\n'}
+[1.285182] (webots_ros2_suv) StdoutLine: {'line': b'writing dependency_links to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/dependency_links.txt\n'}
+[1.285309] (webots_ros2_suv) StdoutLine: {'line': b'writing entry points to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/entry_points.txt\n'}
+[1.285430] (webots_ros2_suv) StdoutLine: {'line': b'writing requirements to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/requires.txt\n'}
+[1.285513] (webots_ros2_suv) StdoutLine: {'line': b'writing top-level names to ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/top_level.txt\n'}
+[1.287943] (webots_ros2_suv) StdoutLine: {'line': b"reading manifest file '../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'\n"}
+[1.291134] (webots_ros2_suv) StdoutLine: {'line': b"writing manifest file '../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info/SOURCES.txt'\n"}
+[1.291276] (webots_ros2_suv) StdoutLine: {'line': b'running build\n'}
+[1.291375] (webots_ros2_suv) StdoutLine: {'line': b'running build_py\n'}
+[1.292014] (webots_ros2_suv) StdoutLine: {'line': b'running install\n'}
+[1.292202] (webots_ros2_suv) StdoutLine: {'line': b'running install_lib\n'}
+[1.293627] (webots_ros2_suv) StdoutLine: {'line': b'running install_data\n'}
+[1.299292] (webots_ros2_suv) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.300465] (webots_ros2_suv) StdoutLine: {'line': b"removing '/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv-2023.0.1-py3.10.egg-info' (and everything under it)\n"}
+[1.300860] (webots_ros2_suv) StdoutLine: {'line': b'Copying ../../ros2_ws/build/webots_ros2_suv/webots_ros2_suv.egg-info to /ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv-2023.0.1-py3.10.egg-info\n'}
+[1.301538] (-) TimerEvent: {}
+[1.301843] (webots_ros2_suv) StdoutLine: {'line': b'running install_scripts\n'}
+[1.316885] (webots_ros2_suv) StdoutLine: {'line': b'Installing node_ego_controller script to /ulstu/ros2_ws/install/webots_ros2_suv/lib/webots_ros2_suv\n'}
+[1.317040] (webots_ros2_suv) StdoutLine: {'line': b'Installing node_sensors_webots script to /ulstu/ros2_ws/install/webots_ros2_suv/lib/webots_ros2_suv\n'}
+[1.317612] (webots_ros2_suv) StdoutLine: {'line': b"writing list of installed files to '/ulstu/ros2_ws/build/webots_ros2_suv/install.log'\n"}
+[1.333339] (webots_ros2_suv) CommandEnded: {'returncode': 0}
+[1.344042] (webots_ros2_suv) JobEnded: {'identifier': 'webots_ros2_suv', 'rc': 0}
+[1.344833] (-) EventReactorShutdown: {}
