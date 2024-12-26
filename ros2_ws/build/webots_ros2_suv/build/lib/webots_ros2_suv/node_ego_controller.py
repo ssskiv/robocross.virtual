@@ -9,6 +9,7 @@ import yaml
 import threading
 import matplotlib.pyplot as plt
 import sensor_msgs.msg
+from std_msgs.msg import Header
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusiveCallbackGroup, ReentrantCallbackGroup
 from std_msgs.msg import Float32, String
@@ -44,8 +45,8 @@ class NodeEgoController(Node):
             self.min_distance = 5
             self.steering_angle=0.0
             self.speed=0.0
-            self.turn_sensitivity = 30.0
-            self.speed_senitivity = 10.0
+            self.turn_sensitivity = 80.0
+            self.speed_senitivity = 20.0
             self.__world_model = WorldModel()
             self.__ws = None
             
@@ -55,6 +56,9 @@ class NodeEgoController(Node):
             self.create_subscription(Odometry, '/odom', self.__on_odom_message, qos)
             self.create_subscription(sensor_msgs.msg.Image, '/vehicle/camera/image_color', self.__on_image_message, qos)
             self.create_subscription(sensor_msgs.msg.PointCloud2, "/lidar", self.__on_lidar_message, qos)
+
+            self.obstacle_publisher = self.create_publisher(sensor_msgs.msg.PointCloud2, 'detected_obstacles', qos)
+            self.closest_publisher = self.create_publisher(sensor_msgs.msg.PointCloud2, 'closest_obstacle', qos)
 
             self.__ackermann_publisher = self.create_publisher(AckermannDrive, 'cmd_ackermann', 1)
             
@@ -78,11 +82,15 @@ class NodeEgoController(Node):
 
         # Example: simple obstacle detection (basic check for obstacles in front)
         obstacles = self.detect_obstacles(points)
+
+        self.publish_obstacles(obstacles)
+
         #obstacles = self.filter_obstacles(points)
         if obstacles.size>0:
-            
+            closest_obstacle, distance  = self.detect_closest_obstacle(obstacles)
             self._logger.info(f"{len(obstacles)} obstacles detected!")
             #if np.median(obstacles['x'])
+            '''
             mean_y = np.mean(obstacles[:,1])
             min_x = np.amin(obstacles[:,0])
             min_z = np.amin(obstacles[:,2])
@@ -91,23 +99,39 @@ class NodeEgoController(Node):
 
             self.speed = np.clip(self.speed, 0, 40)
             delta = 0.05
-            threshold = -0.01
+            threshold = -0.00
             self.steering_angle = np.clip(self.steering_angle, self.buf_steer-delta, self.buf_steer+delta)+threshold
-            self.steering_angle = np.clip(self.steering_angle, -0.7, 0.7)
+            self.steering_angle = np.clip(self.steering_angle, -0.25, 0.25)*np.pi
+            '''
+            '''
+            if closest_obstacle[1]<0:
+                self.steering_angle = -(1/closest_obstacle[1])
+            else:
+                self.steering_angle = 30
+''' 
+            self.steering_angle = (1/closest_obstacle[1])*self.turn_sensitivity
+            self.steering_angle = np.clip(self.steering_angle, -30, 30)
+            if ((distance  >  15) and (closest_obstacle[0]>10)):
+                self.speed = self.speed_senitivity
+            else:
+                self.speed = distance * 2
 
-            self._logger.info(f'Mean of y: {mean_y}, turning {self.steering_angle} degrees (wanted {(1/mean_y) * self.turn_sensitivity+threshold})')
-            self._logger.info(f'Min of x: {min_x}, setting speed {self.speed} (wanted {min_x * self.speed_senitivity})')
-            self._logger.info(f'Min z is {min_z}')
+            self._logger.info(f'Closest object in [{closest_obstacle[0]},{closest_obstacle[1]}, {closest_obstacle[2]}]')
+            self._logger.info(f'Distance = {distance}')
+            self.publish_closest(obstacles[(obstacles[:,0]==closest_obstacle[0])&
+            (obstacles[:,1]==closest_obstacle[1])&
+            (obstacles[:,2]==closest_obstacle[2])])
+            #self._logger.info(f'Min z is {min_z}')
             
                     #self._logger.info(f'Detected obstacle in [{obstacle[0]},{obstacle[1]},{obstacle[2]}]')   
             # You can trigger path planning or stopping logic here
         else:
             self.steering_angle = 0.0
             self.speed = self.speed_senitivity * 2.0
-        self.buf_steer = self.steering_angle
-        #self.drive()
+        #self.buf_steer = self.steering_angle/np.pi
+        self.drive()
 
-    def detect_obstacles(self, points, min_distance=0, max_distance=10.0, min_height=-2, max_height=0, min_y=-3.0, max_y=3.0):
+    def detect_obstacles(self, points, min_distance=0, max_distance=30.0, min_height=-2.2, max_height=0, min_y=-5.0, max_y=5.0):
             # Check for points that are closer than the threshold
             # Extract 'x', 'y', and 'z' fields into a regular NumPy array
         xyz = np.stack([points['x'], points['y'], points['z']], axis=-1)
@@ -118,13 +142,56 @@ class NodeEgoController(Node):
         z= xyz[:,2]
         
         # Filter points based on the distance threshold
-        obstacles = xyz[(x >= min_distance) & (x <= max_distance) &  # Distance filtering
+        obstacles = xyz[(xyz[:,0] >= min_distance) & (x <= max_distance) &  # Distance filtering
             (y>= min_y) & (y <= max_y) &  # Height filtering
             (z>= min_height) & (z <= max_height)  # Y-coordinate filtering
         ]
         return obstacles
 
+    def detect_closest_obstacle(self, obstacles):
+    # Compute distance to each obstacle
+        distances = np.sqrt(obstacles[:, 0]**2 + obstacles[:, 1]**2)
+        closest_index = np.argmin(distances)
+        return obstacles[closest_index], distances[closest_index]
 
+    def publish_obstacles(self, obstacles):
+        if len(obstacles) == 0:
+            self._logger.info("No obstacles to publish.")
+            return
+
+        # Create a PointCloud2 message
+        header = Header()
+        header.stamp = self.get_clock().now().to_msg()
+        header.frame_id = "base_link"  # Set the frame of reference (e.g., the robot's base)
+
+        # Convert structured array to list of tuples
+        points = [(obstacle[0], obstacle[1], obstacle[2]) for obstacle in obstacles]
+
+        # Create the PointCloud2 message
+        pointcloud_msg = pc2.create_cloud_xyz32(header, points)
+
+        # Publish the message
+        self.obstacle_publisher.publish(pointcloud_msg)
+        self._logger.info(f"Published {len(points)} obstacles.")
+    def publish_closest(self, obstacles):
+        if len(obstacles) == 0:
+            self._logger.info("No obstacles to publish.")
+            return
+
+        # Create a PointCloud2 message
+        header = Header()
+        header.stamp = self.get_clock().now().to_msg()
+        header.frame_id = "base_link"  # Set the frame of reference (e.g., the robot's base)
+
+        # Convert structured array to list of tuples
+        points = [(obstacle[0], obstacle[1], obstacle[2]) for obstacle in obstacles]
+
+        # Create the PointCloud2 message
+        pointcloud_msg = pc2.create_cloud_xyz32(header, points)
+
+        # Publish the message
+        self.closest_publisher.publish(pointcloud_msg)
+        self._logger.info(f"Published {len(points)} obstacles.")
 
 
     def __on_range_image_message(self, data):
@@ -136,8 +203,8 @@ class NodeEgoController(Node):
 
     def drive(self):
         self.__world_model.command_message.speed = float(self.speed)
-        self.__world_model.command_message.steering_angle = float(self.steering_angle)
-
+        self.__world_model.command_message.steering_angle = float(self.steering_angle/180*np.pi)
+        self._logger.info(f'Driving to {self.speed} speed, {self.steering_angle} angle')
         self.__ackermann_publisher.publish(self.__world_model.command_message)
 
     #@timeit
@@ -156,11 +223,11 @@ class NodeEgoController(Node):
         delta = t2 - t1
         self.t2 = t1
         fps = 1 / delta if delta > 0 else 100
-        self._logger.info(f"Current FPS: {fps}")
+        self._logger.info(f"Current image FPS: {fps}")
 
         pos = self.__world_model.get_current_position()
 
-        self.drive()
+        #self.drive()
 
         if self.__ws is not None:
             self.__ws.update_model(self.__world_model)
