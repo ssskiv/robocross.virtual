@@ -37,8 +37,10 @@ jobs:
           source ros2_ws/install/setup.bash
       - name: Sphinx build
         run: |
-          source ros2_ws/install/setup.bash
-          rosdoc2 build --package-path ros2_ws/src/webots_ros2_suv
+          cd ros2_ws/
+          colcon build
+          source install/setup.bash
+          rosdoc2 build --package-path src/webots_ros2_suv
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
