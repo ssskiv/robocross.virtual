@@ -1,5 +1,0 @@
-  File "/ulstu/ros2_ws/install/webots_ros2_suv/lib/python3.10/site-packages/webots_ros2_suv/node_ego_controller.py", line 148
-    //self.drive()
-    ^^
-SyntaxError: invalid syntax
-

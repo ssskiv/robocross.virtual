@@ -1,2 +1,0 @@
-Invoking command in '/ulstu/ros2_ws/build/pcl_tutorial': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake /ulstu/ros2_ws/pcl_tutorial/pcl_tutorial -DCMAKE_INSTALL_PREFIX=/ulstu/ros2_ws/install/pcl_tutorial
-Invoked command in '/ulstu/ros2_ws/build/pcl_tutorial' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake /ulstu/ros2_ws/pcl_tutorial/pcl_tutorial -DCMAKE_INSTALL_PREFIX=/ulstu/ros2_ws/install/pcl_tutorial

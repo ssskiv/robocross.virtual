@@ -1,4 +1,0 @@
-Invoking command in '/ulstu/ros2_ws/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake --build /ulstu/ros2_ws/build/robot_interfaces -- -j12 -l12
-Invoked command in '/ulstu/ros2_ws/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake --build /ulstu/ros2_ws/build/robot_interfaces -- -j12 -l12
-Invoking command in '/ulstu/ros2_ws/build/robot_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake --install /ulstu/ros2_ws/build/robot_interfaces
-Invoked command in '/ulstu/ros2_ws/build/robot_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/ulstu/ros2_ws/install/webots_ros2_suv:/opt/ros/humble /usr/bin/cmake --install /ulstu/ros2_ws/build/robot_interfaces
