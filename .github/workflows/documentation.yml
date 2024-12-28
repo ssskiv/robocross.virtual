@@ -16,7 +16,12 @@ jobs:
           pip install sphinx sphinx_rtd_theme myst_parser rosdoc2
       - name: Install ROS2 humble
         run: |
-          sudo apt install ros-humble-desktop
+          sudo apt install software-properties-common
+          sudo add-apt-repository universe
+          sudo apt update && sudo apt install curl -y
+          sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+          sudo apt update
+          sudo apt install ros-humble-ros-base
       - name: List
         run: |
           tree
