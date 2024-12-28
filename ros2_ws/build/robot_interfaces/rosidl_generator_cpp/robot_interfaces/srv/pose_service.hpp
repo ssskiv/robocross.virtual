@@ -7,5 +7,6 @@
 #include "robot_interfaces/srv/detail/pose_service__struct.hpp"
 #include "robot_interfaces/srv/detail/pose_service__builder.hpp"
 #include "robot_interfaces/srv/detail/pose_service__traits.hpp"
+#include "robot_interfaces/srv/detail/pose_service__type_support.hpp"
 
 #endif  // ROBOT_INTERFACES__SRV__POSE_SERVICE_HPP_

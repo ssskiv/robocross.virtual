@@ -7,5 +7,6 @@
 #include "robot_interfaces/msg/detail/ego_pose__struct.hpp"
 #include "robot_interfaces/msg/detail/ego_pose__builder.hpp"
 #include "robot_interfaces/msg/detail/ego_pose__traits.hpp"
+#include "robot_interfaces/msg/detail/ego_pose__type_support.hpp"
 
 #endif  // ROBOT_INTERFACES__MSG__EGO_POSE_HPP_

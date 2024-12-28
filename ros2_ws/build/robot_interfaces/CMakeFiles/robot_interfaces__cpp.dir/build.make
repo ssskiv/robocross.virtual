@@ -70,10 +70,13 @@ CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/ego_
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__builder.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__struct.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__builder.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__struct.hpp
 CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp
+CMakeFiles/robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
 
 rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp: /opt/ros/humble/lib/rosidl_generator_cpp/rosidl_generator_cpp
 rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp: /opt/ros/humble/local/lib/python3.10/dist-packages/rosidl_generator_cpp/__init__.py
@@ -136,6 +139,9 @@ rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__struct.hpp: rosidl_ge
 rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp
 
+rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp
+
 rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp
 
@@ -148,14 +154,19 @@ rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__struct.hpp: rosid
 rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp
 
+rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp
+
 robot_interfaces__cpp: CMakeFiles/robot_interfaces__cpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__builder.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__struct.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__builder.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__struct.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp
+robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp
 robot_interfaces__cpp: rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp
 robot_interfaces__cpp: CMakeFiles/robot_interfaces__cpp.dir/build.make
 .PHONY : robot_interfaces__cpp

@@ -354,19 +354,6 @@ robot_interfaces__rosidl_generator_py/fast:
 .PHONY : robot_interfaces__rosidl_generator_py/fast
 
 #=============================================================================
-# Target rules for targets named robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
-
-# Build rule for target.
-robot_interfaces__rosidl_typesupport_fastrtps_c__pyext: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
-.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
-
-# fast build rule for target.
-robot_interfaces__rosidl_typesupport_fastrtps_c__pyext/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
-.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext/fast
-
-#=============================================================================
 # Target rules for targets named robot_interfaces__rosidl_typesupport_introspection_c__pyext
 
 # Build rule for target.
@@ -378,6 +365,19 @@ robot_interfaces__rosidl_typesupport_introspection_c__pyext: cmake_check_build_s
 robot_interfaces__rosidl_typesupport_introspection_c__pyext/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build
 .PHONY : robot_interfaces__rosidl_typesupport_introspection_c__pyext/fast
+
+#=============================================================================
+# Target rules for targets named robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+
+# Build rule for target.
+robot_interfaces__rosidl_typesupport_fastrtps_c__pyext: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+
+# fast build rule for target.
+robot_interfaces__rosidl_typesupport_fastrtps_c__pyext/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
+.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext/fast
 
 #=============================================================================
 # Target rules for targets named robot_interfaces__rosidl_typesupport_c__pyext

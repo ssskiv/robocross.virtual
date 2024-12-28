@@ -15,9 +15,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__builder.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__struct.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
+  "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__builder.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__struct.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
+  "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp" "/ulstu/ros2_ws/build/robot_interfaces/rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   )
 

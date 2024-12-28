@@ -73,8 +73,8 @@ all: CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_cpp.dir/all
 all: CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/all
 all: CMakeFiles/ament_cmake_python_build_robot_interfaces_egg.dir/all
 all: CMakeFiles/robot_interfaces__rosidl_generator_py.dir/all
-all: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
 all: CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/all
+all: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
 all: CMakeFiles/robot_interfaces__rosidl_typesupport_c__pyext.dir/all
 all: robot_interfaces__py/all
 .PHONY : all
@@ -98,8 +98,8 @@ clean: CMakeFiles/robot_interfaces__rosidl_typesupport_cpp.dir/clean
 clean: CMakeFiles/ament_cmake_python_copy_robot_interfaces.dir/clean
 clean: CMakeFiles/ament_cmake_python_build_robot_interfaces_egg.dir/clean
 clean: CMakeFiles/robot_interfaces__rosidl_generator_py.dir/clean
-clean: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
 clean: CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/clean
+clean: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
 clean: CMakeFiles/robot_interfaces__rosidl_typesupport_c__pyext.dir/clean
 clean: robot_interfaces__py/clean
 .PHONY : clean
@@ -493,36 +493,6 @@ CMakeFiles/robot_interfaces__rosidl_generator_py.dir/clean:
 .PHONY : CMakeFiles/robot_interfaces__rosidl_generator_py.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir
-
-# All Build rule for target.
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_generator_c.dir/all
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/all
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/all
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_generator_py.dir/all
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: robot_interfaces__py/CMakeFiles/robot_interfaces__py.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/ulstu/ros2_ws/build/robot_interfaces/CMakeFiles --progress-num=24,25 "Built target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext"
-.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /ulstu/ros2_ws/build/robot_interfaces/CMakeFiles 35
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /ulstu/ros2_ws/build/robot_interfaces/CMakeFiles 0
-.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule
-
-# Convenience name for target.
-robot_interfaces__rosidl_typesupport_fastrtps_c__pyext: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule
-.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
-
-# clean rule for target.
-CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
-.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir
 
 # All Build rule for target.
@@ -551,6 +521,36 @@ robot_interfaces__rosidl_typesupport_introspection_c__pyext: CMakeFiles/robot_in
 CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/clean
 .PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_introspection_c__pyext.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir
+
+# All Build rule for target.
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_generator_c.dir/all
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c.dir/all
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_typesupport_c.dir/all
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: CMakeFiles/robot_interfaces__rosidl_generator_py.dir/all
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all: robot_interfaces__py/CMakeFiles/robot_interfaces__py.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/ulstu/ros2_ws/build/robot_interfaces/CMakeFiles --progress-num=24,25 "Built target robot_interfaces__rosidl_typesupport_fastrtps_c__pyext"
+.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /ulstu/ros2_ws/build/robot_interfaces/CMakeFiles 35
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /ulstu/ros2_ws/build/robot_interfaces/CMakeFiles 0
+.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule
+
+# Convenience name for target.
+robot_interfaces__rosidl_typesupport_fastrtps_c__pyext: CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rule
+.PHONY : robot_interfaces__rosidl_typesupport_fastrtps_c__pyext
+
+# clean rule for target.
+CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/build.make CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
+.PHONY : CMakeFiles/robot_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/robot_interfaces__rosidl_typesupport_c__pyext.dir

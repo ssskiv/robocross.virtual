@@ -3,10 +3,12 @@ file(REMOVE_RECURSE
   "rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__builder.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__struct.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__traits.hpp"
+  "rosidl_generator_cpp/robot_interfaces/msg/detail/ego_pose__type_support.hpp"
   "rosidl_generator_cpp/robot_interfaces/msg/ego_pose.hpp"
   "rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__builder.hpp"
   "rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__struct.hpp"
   "rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__traits.hpp"
+  "rosidl_generator_cpp/robot_interfaces/srv/detail/pose_service__type_support.hpp"
   "rosidl_generator_cpp/robot_interfaces/srv/pose_service.hpp"
 )
 

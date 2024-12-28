@@ -317,3 +317,18 @@ get_service_type_support_handle<robot_interfaces::srv::PoseService>()
 }
 
 }  // namespace rosidl_typesupport_cpp
+
+#ifdef __cplusplus
+extern "C"
+{
+#endif
+
+ROSIDL_TYPESUPPORT_CPP_PUBLIC
+const rosidl_service_type_support_t *
+ROSIDL_TYPESUPPORT_INTERFACE__SERVICE_SYMBOL_NAME(rosidl_typesupport_cpp, robot_interfaces, srv, PoseService)() {
+  return ::rosidl_typesupport_cpp::get_service_type_support_handle<robot_interfaces::srv::PoseService>();
+}
+
+#ifdef __cplusplus
+}
+#endif
