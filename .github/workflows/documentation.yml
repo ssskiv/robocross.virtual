@@ -26,6 +26,10 @@ jobs:
       - name: List
         run: |
           tree
+      - name: Colcon build
+        run: |
+          cd /ros2_ws
+          colcon build
       - name: Setup
         run: |
           source ros2_ws/install/setup.bash
