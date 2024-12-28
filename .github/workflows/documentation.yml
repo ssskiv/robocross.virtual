@@ -16,7 +16,10 @@ jobs:
           pip install sphinx sphinx_rtd_theme myst_parser rosdoc2
       - name: List
         run: |
-          ls
+          tree
+      - name: Setup
+        run: |
+          source ros2_ws/install/setup.bash
       - name: Sphinx build
         run: |
           rosdoc2 build --package-path ros2_ws/src/webots_ros2_suv
