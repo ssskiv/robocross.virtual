@@ -1,0 +1,7 @@
+webots\_ros2\_suv.node\_ego\_controller module
+==============================================
+
+.. automodule:: webots_ros2_suv.node_ego_controller
+   :members:
+   :undoc-members:
+   :show-inheritance:

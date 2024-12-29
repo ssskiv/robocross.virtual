@@ -1,0 +1,7 @@
+webots\_ros2\_suv.lib.world\_model module
+=========================================
+
+.. automodule:: webots_ros2_suv.lib.world_model
+   :members:
+   :undoc-members:
+   :show-inheritance:

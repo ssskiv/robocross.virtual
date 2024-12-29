@@ -1,0 +1,28 @@
+webots\_ros2\_suv package
+=========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   webots_ros2_suv.lib
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   webots_ros2_suv.node_ego_controller
+   webots_ros2_suv.node_sensors_webots
+   webots_ros2_suv.suv_driver
+
+Module contents
+---------------
+
+.. automodule:: webots_ros2_suv
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webots_ros2_suv &mdash; webots_ros2_suv 2023.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="webots_ros2_suv" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> webots_ros2_suv
+          </a>
+              <div class="version">
+                2023.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webots_ros2_suv.html">webots_ros2_suv package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webots_ros2_suv.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.lib.html">webots_ros2_suv.lib package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webots_ros2_suv.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.node_ego_controller.html">webots_ros2_suv.node_ego_controller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.node_sensors_webots.html">webots_ros2_suv.node_sensors_webots module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.suv_driver.html">webots_ros2_suv.suv_driver module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webots_ros2_suv.html#module-webots_ros2_suv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#webots-ros">Средства симуляции на основе Webots и ROS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id1">ПО для запуска</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id2">Минимальные требования к оборудованию</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#linux-ros-humble">Установка пакетов Linux после установки ROS Humble по стандартной инструкции</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id3">Скачивание репозитория</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id4">Установка решения</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id5">Установка переменных среды</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#python">Установка пакетов python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id6">Для установки драйвера лидара (на реальном автомобиле)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#zed">Для установки драйвера камеры ZED (на реальном автомобиле)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id7">Запуск</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#macos">Запуск из-под виртуальной машины в MacOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#id8">Прочие заметки</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id9">Полезные статьи для обзора</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id10">Неявные ошибки</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">webots_ros2_suv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li>webots_ros2_suv</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="webots-ros2-suv">
+<h1>webots_ros2_suv<a class="headerlink" href="#webots-ros2-suv" title="Permalink to this headline"></a></h1>
+<p>SUV ROS2 interface for Webots.</p>
+<ul class="simple">
+<li><p>Links</p>
+<ul>
+<li><p><a class="reference external" href="http://wiki.ros.org/webots_ros2">Website</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cyberbotics/webots_ros2/issues">Bugtracker</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cyberbotics/webots_ros2">Repository</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Python API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webots_ros2_suv.html">webots_ros2_suv package</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/README.html">README</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="readme">
+<h1>README<a class="headerlink" href="#readme" title="Permalink to this headline"></a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="webots-ros">
+<h2>Средства симуляции на основе Webots и ROS<a class="headerlink" href="#webots-ros" title="Permalink to this headline"></a></h2>
+<section id="id1">
+<h3>ПО для запуска<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Linux Ubuntu 22.04</p></li>
+<li><p>ROS2 Humble <a class="reference external" href="https://docs.ros.org/en/humble/Installation.html">Инструкция по установке</a></p></li>
+<li><p><a class="reference external" href="https://github.com/cyberbotics/webots/releases/download/R2023b/webots_2023b_amd64.deb">Webots 2023b</a></p></li>
+</ul>
+</section>
+<section id="id2">
+<h3>Минимальные требования к оборудованию<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>процессор Intel не ниже i5</p></li>
+<li><p>GPU Nvidia не ниже 1060</p></li>
+<li><p>ОЗУ 8Гб</p></li>
+<li><p>Накопитель не менее 128Гб</p></li>
+</ul>
+</section>
+<section id="linux-ros-humble">
+<h3>Установка пакетов Linux после установки ROS Humble по стандартной инструкции<a class="headerlink" href="#linux-ros-humble" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>source /opt/ros/humble/setup.bash
+sudo apt install ros-humble-nav2-common
+sudo apt install ros-humble-webots-ros2
+sudo apt-get install ros-$ROS_DISTRO-pcl-ros ros-$ROS_DISTRO-pluginlib  ros-$ROS_DISTRO-pcl-conversions
+sudo apt-get install libpcap-dev
+sudo apt-get install libboost${BOOST_VERSION}-dev
+sudo apt install python3-pip
+pip install git+https://github.com/rdesc/pydubins.git
+</pre></div>
+</div>
+</section>
+<section id="id3">
+<h3>Скачивание репозитория<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="o">~/</span><span class="n">repositories</span>
+<span class="n">cd</span> <span class="o">~/</span><span class="n">repositories</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">ulstu</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">.</span><span class="n">git</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">ros2_ws</span>
+<span class="n">mkdir</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span>
+</pre></div>
+</div>
+</section>
+<section id="id4">
+<h3>Установка решения<a class="headerlink" href="#id4" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Необходимо установить символические ссылки на папки simulation/pcl_maps, simulation/robot_interfaces и simulation/webots_ros2_suv в папку ~/ros2_ws/src</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">simulation</span><span class="o">/</span><span class="n">pcl_maps</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">pcl_maps</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">simulation</span><span class="o">/</span><span class="n">robot_interfaces</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">robot_interfaces</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">simulation</span><span class="o">/</span><span class="n">webots_ros2_suv</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">webots_ros2_suv</span>
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3>Установка переменных среды<a class="headerlink" href="#id5" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>В ~/.bashrc добавить переменные среды (внимательнее с именем пользователя!):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">source</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">ros</span><span class="o">/</span><span class="n">humble</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">source</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">install</span><span class="o">/</span><span class="n">setup</span><span class="o">.</span><span class="n">bash</span>
+<span class="n">export</span> <span class="n">WEBOTS_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">webots</span>
+<span class="n">export</span> <span class="n">ROS2_WEBOTS_HOME</span><span class="o">=/</span><span class="n">usr</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">webots</span>
+</pre></div>
+</div>
+</section>
+<section id="python">
+<h3>Установка пакетов python<a class="headerlink" href="#python" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">webots_ros2_suv</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</section>
+<section id="id6">
+<h3>Для установки драйвера лидара (на реальном автомобиле)<a class="headerlink" href="#id6" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">lslidar_chx1</span><span class="o">/</span><span class="n">lslidar_msgs</span><span class="o">/</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">lslidar_msgs</span>
+<span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">lslidar_chx1</span><span class="o">/</span><span class="n">lslidar_driver</span><span class="o">/</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">lslidar_driver</span>
+</pre></div>
+</div>
+</section>
+<section id="zed">
+<h3>Для установки драйвера камеры ZED (на реальном автомобиле)<a class="headerlink" href="#zed" title="Permalink to this headline"></a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ln</span> <span class="o">-</span><span class="n">s</span> <span class="o">~/</span><span class="n">repositories</span><span class="o">/</span><span class="n">cad</span><span class="o">-</span><span class="bp">self</span><span class="o">-</span><span class="n">driving</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">zed</span><span class="o">-</span><span class="n">ros2</span><span class="o">-</span><span class="n">wrapper</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">zed</span><span class="o">-</span><span class="n">ros2</span><span class="o">-</span><span class="n">wrapper</span>
+<span class="n">rosdep</span> <span class="n">install</span> <span class="o">--</span><span class="n">from</span><span class="o">-</span><span class="n">paths</span> <span class="n">src</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">src</span> <span class="o">-</span><span class="n">r</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+<p>Для скачивания и установки весов нейронных сетей скачать в папку ~/ros2_ws/src/webots_ros2_suv/resource файл по ссылке https://disk.yandex.ru/d/SiHdbj_grmqD4A (альтернативная ссылка: https://drive.google.com/drive/folders/1OCcuewvbdDOLtX6npBMKlyta16Tf6_cM), затем:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">ros2_ws</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">webots_ros2_suv</span><span class="o">/</span><span class="n">resource</span>
+<span class="n">unzip</span> <span class="n">resource</span><span class="o">.</span><span class="n">zip</span>
+</pre></div>
+</div>
+<p>При этом содержимое папки resource (отдельные файлы и папки) должно быть скопировано в папку resource</p>
+</section>
+<section id="id7">
+<h3>Запуск<a class="headerlink" href="#id7" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p>Перед первым запуском необходимо скомпилировать web-панель по <a class="reference external" href="https://github.com/ulstu/cad-self-driving/tree/main/simulation/webots_ros2_suv/map-server">инструкции</a></p></li>
+<li><p>Компиляция командой ‘colcon build’ из папки ~/ros2_ws</p></li>
+<li><p>Запуск командой ‘ros2 launch webots_ros2_suv robot_launch.py’</p></li>
+<li><p>После добавления новых файлов из папки ~/ros2_ws необходимо выполнить команду source install/setup.bash</p></li>
+<li><p>Если стоит conda/miniconda, необходимо ее деактивировать ‘conda deactivate’</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="macos">
+<h2>Запуск из-под виртуальной машины в MacOS<a class="headerlink" href="#macos" title="Permalink to this headline"></a></h2>
+<p>Инструкция для humble: https://docs.ros.org/en/humble/Tutorials/Advanced/Simulators/Webots/Installation-MacOS.html#install-webots-ros2
+Устанавливать webots-ros2 только из исходников
+В файлах изменить код:</p>
+<ol class="arabic simple">
+<li><p>webots_ros2_driver/scripts/webots_tcp_client.py перед строкой 28 дописать:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="s1">&#39;WEBOTS_IP&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;WEBOTS_IP&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>webots_ros2_driver/webots_ros2_driver/utils.py перед строкой 128</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="k">if</span> <span class="s1">&#39;WEBOTS_IP&#39;</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;WEBOTS_IP&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li><p>В пользовательском файле ~/.bashrc добавить переменную среды со значением IP хостового компьютера:</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">WEBOTS_IP</span><span class="o">=</span><span class="mf">10.211.55.2</span>
+</pre></div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="id8">
+<h2>Прочие заметки<a class="headerlink" href="#id8" title="Permalink to this headline"></a></h2>
+<section id="id9">
+<h3>Полезные статьи для обзора<a class="headerlink" href="#id9" title="Permalink to this headline"></a></h3>
+<p>Bird’s-Eye-View Panoptic Segmentation Using Monocular Frontal View Images
+https://arxiv.org/abs/2108.03227</p>
+<p>Cam2BEV
+https://github.com/ika-rwth-aachen/Cam2BEV</p>
+<p>RANSAC
+Martin A. Fischler and Robert C. Bolles (June 1981). “Random Sample Consensus: A Paradigm for Model Fitting with Applications to Image Analysis and Automated Cartography”. Comm. of the ACM 24: 381–395.</p>
+<p>Visualization of Obstacles on Bird’s-eye View Using Depth Sensor for Remote Controlled Robot
+http://www.robot.t.u-tokyo.ac.jp/~yamashita/paper/B/B172Final.pdf</p>
+</section>
+<section id="id10">
+<h3>Неявные ошибки<a class="headerlink" href="#id10" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>Если при импорте torch возникает ошибка “name ‘sympy’ is not defined”, то выполнить команду</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install mpmath --upgrade
+</pre></div>
+</div>
+</section>
+</section>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-right" title="webots_ros2_suv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;webots_ros2_suv&gt; Contributors. License: Apache License 2.0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+webots\_ros2\_suv.lib.car\_model module
+=======================================
+
+.. automodule:: webots_ros2_suv.lib.car_model
+   :members:
+   :undoc-members:
+   :show-inheritance:

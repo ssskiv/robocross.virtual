@@ -1,0 +1,7 @@
+webots\_ros2\_suv.lib.orientation module
+========================================
+
+.. automodule:: webots_ros2_suv.lib.orientation
+   :members:
+   :undoc-members:
+   :show-inheritance:

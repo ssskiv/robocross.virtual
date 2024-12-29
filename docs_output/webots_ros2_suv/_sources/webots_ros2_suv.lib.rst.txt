@@ -1,0 +1,24 @@
+webots\_ros2\_suv.lib package
+=============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   webots_ros2_suv.lib.car_model
+   webots_ros2_suv.lib.coords_transformer
+   webots_ros2_suv.lib.map_server
+   webots_ros2_suv.lib.map_utils
+   webots_ros2_suv.lib.orientation
+   webots_ros2_suv.lib.timeit
+   webots_ros2_suv.lib.world_model
+
+Module contents
+---------------
+
+.. automodule:: webots_ros2_suv.lib
+   :members:
+   :undoc-members:
+   :show-inheritance:

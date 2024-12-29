@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>webots_ros2_suv.lib.coords_transformer module &mdash; webots_ros2_suv 2023.0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="webots_ros2_suv.lib.map_server module" href="webots_ros2_suv.lib.map_server.html" />
+    <link rel="prev" title="webots_ros2_suv.lib.car_model module" href="webots_ros2_suv.lib.car_model.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> webots_ros2_suv
+          </a>
+              <div class="version">
+                2023.0
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Python API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="webots_ros2_suv.html">webots_ros2_suv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="webots_ros2_suv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="webots_ros2_suv.lib.html">webots_ros2_suv.lib package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webots_ros2_suv.html#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.node_ego_controller.html">webots_ros2_suv.node_ego_controller module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.node_sensors_webots.html">webots_ros2_suv.node_sensors_webots module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="webots_ros2_suv.suv_driver.html">webots_ros2_suv.suv_driver module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webots_ros2_suv.html#module-webots_ros2_suv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="standards.html">Standard Documents</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/PACKAGE.html">PACKAGE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="standard_docs/README.html">README</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#webots-ros">Средства симуляции на основе Webots и ROS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id1">ПО для запуска</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id2">Минимальные требования к оборудованию</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#linux-ros-humble">Установка пакетов Linux после установки ROS Humble по стандартной инструкции</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id3">Скачивание репозитория</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id4">Установка решения</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id5">Установка переменных среды</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#python">Установка пакетов python</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id6">Для установки драйвера лидара (на реальном автомобиле)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#zed">Для установки драйвера камеры ZED (на реальном автомобиле)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id7">Запуск</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#macos">Запуск из-под виртуальной машины в MacOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="standard_docs/README.html#id8">Прочие заметки</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id9">Полезные статьи для обзора</a></li>
+<li class="toctree-l4"><a class="reference internal" href="standard_docs/README.html#id10">Неявные ошибки</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">webots_ros2_suv</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">webots_ros2_suv</a> &raquo;</li>
+          <li><a href="webots_ros2_suv.html">webots_ros2_suv package</a> &raquo;</li>
+          <li><a href="webots_ros2_suv.lib.html">webots_ros2_suv.lib package</a> &raquo;</li>
+      <li>webots_ros2_suv.lib.coords_transformer module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/webots_ros2_suv.lib.coords_transformer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-webots_ros2_suv.lib.coords_transformer">
+<span id="webots-ros2-suv-lib-coords-transformer-module"></span><h1>webots_ros2_suv.lib.coords_transformer module<a class="headerlink" href="#module-webots_ros2_suv.lib.coords_transformer" title="Permalink to this headline"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">webots_ros2_suv.lib.coords_transformer.</span></span><span class="sig-name descname"><span class="pre">CoordsTransformer</span></span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.calc_bearing">
+<span class="sig-name descname"><span class="pre">calc_bearing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pointA</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pointB</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.calc_bearing" title="Permalink to this definition"></a></dt>
+<dd><p>Вычисляет азимут между двумя точками по формуле
+geodesic     θ = atan2(sin(Δlong).cos(lat2),
+cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+Параметры:
+pointA: кортеж чисел с плавающей запятой: (широта, долгота) начальной точки
+pointB: кортеж с плавающей запятой: (широта, долгота) точки назначения
+Возвращаемое значение:
+float: азимут в градусах от севера
+`</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_coord_corrections">
+<span class="sig-name descname"><span class="pre">get_coord_corrections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_coord_corrections" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coordinates">
+<span class="sig-name descname"><span class="pre">get_global_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">local_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">local_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pov_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coordinates" title="Permalink to this definition"></a></dt>
+<dd><p>Преобразует точки в локальных координатах обратно в глобальные координаты.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>local_x</strong> – координата X в локальной системе</p></li>
+<li><p><strong>local_y</strong> – координата Y в локальной системе</p></li>
+<li><p><strong>pos</strong> – текущее положение (широта, долгота, угол поворота)</p></li>
+<li><p><strong>pov_point</strong> – точка зрения (X, Y) в пикселях</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>кортеж глобальных координат (широта, долгота)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coordinates_from_ipm_coords_">
+<span class="sig-name descname"><span class="pre">get_global_coordinates_from_ipm_coords_</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relative_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pov_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coordinates_from_ipm_coords_" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coords">
+<span class="sig-name descname"><span class="pre">get_global_coords</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">yaw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_global_coords" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_relative_coordinates">
+<span class="sig-name descname"><span class="pre">get_relative_coordinates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pov_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_relative_coordinates" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_relative_coordinates_f">
+<span class="sig-name descname"><span class="pre">get_relative_coordinates_f</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">lat_goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lon_goal</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pov_point</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#webots_ros2_suv.lib.coords_transformer.CoordsTransformer.get_relative_coordinates_f" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="webots_ros2_suv.lib.car_model.html" class="btn btn-neutral float-left" title="webots_ros2_suv.lib.car_model module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="webots_ros2_suv.lib.map_server.html" class="btn btn-neutral float-right" title="webots_ros2_suv.lib.map_server module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright The &lt;webots_ros2_suv&gt; Contributors. License: Apache License 2.0.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
