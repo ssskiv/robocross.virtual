@@ -7,9 +7,9 @@ import cv2
 import numpy as np
 import yaml
 import math
-from ament_index_python.packages import get_package_share_directory
 
-HOME_DIR = os.path.expanduser('~')
+
+HOME_DIR = os.path.expanduser('/ulstu/')
 BASE_PATH = os.path.join(HOME_DIR, 'ros2_ws/src/webots_ros2_suv/')
 YAML_PATH = BASE_PATH + 'config/simulator/global_coords.yaml'
 
@@ -52,13 +52,14 @@ class CoordsTransformer(object):
     def calc_bearing(self, pointA, pointB):
         """
         Вычисляет азимут между двумя точками по формуле
-       geodesic     θ = atan2(sin(Δlong).cos(lat2),
-                    cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
+        geodesic     θ = atan2(sin(Δlong).cos(lat2),
+        cos(lat1).sin(lat2) − sin(lat1).cos(lat2).cos(Δlong))
         Параметры:
         pointA: кортеж чисел с плавающей запятой: (широта, долгота) начальной точки
         pointB: кортеж с плавающей запятой: (широта, долгота) точки назначения
         Возвращаемое значение:
         float: азимут в градусах от севера
+        `
         """
         lat1 = math.radians(pointA[0])
         lat2 = math.radians(pointB[0])

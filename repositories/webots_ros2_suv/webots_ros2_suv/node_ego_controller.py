@@ -34,6 +34,11 @@ import sensor_msgs_py.point_cloud2 as pc2
 SENSOR_DEPTH = 40
 
 class NodeEgoController(Node):
+    """Drive controller
+
+    Args:
+        Node (_type_): _description_
+    """
     def __init__(self):
         try:
             super().__init__('node_ego_controller')
@@ -72,11 +77,21 @@ class NodeEgoController(Node):
         threading.Thread(target=start_web_server, args=[self.__ws]).start()
 
     def __on_lidar_message(self, data):
+        """Lidar callback function
+
+        Args:
+            data (sensor_msgs.msg.PointCloud2)
+        """
         pc_data = pc2.read_points(data, field_names=("x", "y", "z"), skip_nans=True)
         points = list(pc_data)  # List of (x, y, z) tuples
         self.process_point_cloud(np.array(points))
 
     def process_point_cloud(self, points):
+        """Main function to handle lidar
+
+        Args:
+            points (np.array): array of points
+        """
         # Implement the logic to process the point cloud data
         self._logger.info(f'Processing {len(points)} points')
 
@@ -132,6 +147,17 @@ class NodeEgoController(Node):
         self.drive()
 
     def detect_obstacles(self, points, min_distance=0, max_distance=30.0, min_height=-2.2, max_height=0, min_y=-5.0, max_y=5.0):
+        """_summary_
+
+        Args:
+            points (np.array): array of points
+            min_distance (int, optional): _description_. Defaults to 0.
+            max_distance (float, optional): _description_. Defaults to 30.0.
+            min_height (float, optional): _description_. Defaults to -2.2.
+            max_height (int, optional): _description_. Defaults to 0.
+            min_y (float, optional): _description_. Defaults to -5.0.
+            max_y (float, optional): _description_. Defaults to 5.0.
+        """
             # Check for points that are closer than the threshold
             # Extract 'x', 'y', and 'z' fields into a regular NumPy array
         xyz = np.stack([points['x'], points['y'], points['z']], axis=-1)
@@ -149,12 +175,25 @@ class NodeEgoController(Node):
         return obstacles
 
     def detect_closest_obstacle(self, obstacles):
+        """Detecting closest point from obstacles array
+
+        Args:
+            obstacles (np.array): _description_
+
+        Returns:
+            np.array: closest point
+        """
     # Compute distance to each obstacle
         distances = np.sqrt(obstacles[:, 0]**2 + obstacles[:, 1]**2)
         closest_index = np.argmin(distances)
         return obstacles[closest_index], distances[closest_index]
 
     def publish_obstacles(self, obstacles):
+        """Method for publishing found obstacles
+
+        Args:
+            obstacles (np.array): _description_
+        """
         if len(obstacles) == 0:
             self._logger.info("No obstacles to publish.")
             return
@@ -174,6 +213,11 @@ class NodeEgoController(Node):
         self.obstacle_publisher.publish(pointcloud_msg)
         self._logger.info(f"Published {len(points)} obstacles.")
     def publish_closest(self, obstacles):
+        """Method for publishing ONE closest point
+
+        Args:
+            obstacles (np.array): _description_
+        """
         if len(obstacles) == 0:
             self._logger.info("No obstacles to publish.")
             return
@@ -195,6 +239,11 @@ class NodeEgoController(Node):
 
 
     def __on_range_image_message(self, data):
+        """RangeFinder callback function
+
+        Args:
+            data (): _description_
+        """
         image = np.frombuffer(data.data, dtype="float32").reshape((data.height, data.width, 1))
         image[image == np.inf] = SENSOR_DEPTH
         image[image == -np.inf] = 0
@@ -202,6 +251,8 @@ class NodeEgoController(Node):
         range_image = image / SENSOR_DEPTH
 
     def drive(self):
+        """Method for drive. Getting speed, steering angle(degrees) from self properties
+        """
         self.__world_model.command_message.speed = float(self.speed)
         self.__world_model.command_message.steering_angle = float(self.steering_angle/180*np.pi)
         self._logger.info(f'Driving to {self.speed} speed, {self.steering_angle} angle')
@@ -209,6 +260,11 @@ class NodeEgoController(Node):
 
     #@timeit
     def __on_image_message(self, data):
+        """Camera callback function
+
+        Args:
+            data (sensor_msgs.msg.Image): image from camera
+        """
         image = data.data
         image = np.frombuffer(image, dtype=np.uint8).reshape((data.height, data.width, 4))
         analyze_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_RGBA2RGB))
@@ -233,13 +289,23 @@ class NodeEgoController(Node):
             self.__ws.update_model(self.__world_model)
 
     def __on_odom_message(self, data):
-            roll, pitch, yaw = euler_from_quaternion(data.pose.pose.orientation.x, data.pose.pose.orientation.y, data.pose.pose.orientation.z, data.pose.pose.orientation.w)
-            lat, lon, orientation = self.__world_model.coords_transformer.get_global_coords(data.pose.pose.position.x, data.pose.pose.position.y, yaw)
-            self.__world_model.update_car_pos(lat, lon, orientation)
-            if self.__ws is not None:
-                self.__ws.update_model(self.__world_model)
+        """Odometry callback
+
+        Args:
+            data (nav_msgs.msg.Odometry): odometry data
+        """
+        roll, pitch, yaw = euler_from_quaternion(data.pose.pose.orientation.x, data.pose.pose.orientation.y, data.pose.pose.orientation.z, data.pose.pose.orientation.w)
+        lat, lon, orientation = self.__world_model.coords_transformer.get_global_coords(data.pose.pose.position.x, data.pose.pose.position.y, yaw)
+        self.__world_model.update_car_pos(lat, lon, orientation)
+        if self.__ws is not None:
+            self.__ws.update_model(self.__world_model)
 
 def main(args=None):
+    """Main controller spin ROS2 function
+
+    Args:
+        args (_type_, optional): _description_. Defaults to None.
+    """
     try:
         rclpy.init(args=args)
         path_controller = NodeEgoController()
