@@ -32,8 +32,8 @@ import sensor_msgs_py.point_cloud2 as pc2
 
 
 SENSOR_DEPTH = 40
-SPEED_SENS = 20
-TURN_SENS = 160
+SPEED_SENS = 1
+TURN_SENS = 1
 TURN_MAX = 30
 
 class NodeEgoController(Node):
@@ -190,10 +190,22 @@ class NodeEgoController(Node):
         #self._logger.info(f"Published {len(points)} obstacles.")
 
     def __on_cmd_message(self, data):
-        self.speed = SPEED_SENS * data.linear.x
-        self.steering_angle = -data.angular.z * 180
-        if self.speed==0 and self.steering_angle!=0:
-            self.speed=0.25*SPEED_SENS
+        linear_velocity = data.linear.x
+        angular_velocity = -data.angular.z
+        
+        # Compute steering angle based on Ackermann kinematics
+        if abs(angular_velocity) == 0:  # Handle straight motion
+            steering_angle = 0.0
+        else:
+            if linear_velocity!=0:
+                wheelbase = 4.3#rear to front axles
+                steering_angle = math.atan(wheelbase * angular_velocity / linear_velocity)
+            else:
+                steering_angle = 0.0
+        
+        # Limit steering angle within allowed bounds
+        self.steering_angle = max(-np.pi/4, min(np.pi/4, steering_angle))
+        self.speed = SPEED_SENS * linear_velocity
         self.drive()
 
     def __on_range_image_message(self, data):
@@ -208,7 +220,7 @@ class NodeEgoController(Node):
     def drive(self):
         self.__world_model.command_message.speed = float(self.speed)
         self.__world_model.command_message.steering_angle = float(
-            self.steering_angle / 180 
+            self.steering_angle 
         )
         #self._logger.info(f"Driving to {self.speed} speed, {self.steering_angle} angle")
         self.__ackermann_publisher.publish(self.__world_model.command_message)
