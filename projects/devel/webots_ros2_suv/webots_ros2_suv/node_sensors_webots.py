@@ -27,6 +27,7 @@ class NodeSensorsWebots(Node):
             self.__gps_publisher = self.create_publisher(NavSatFix, "/vehicle/gps_nav", qos)
             self.__odom_publisher = self.create_publisher(Odometry, "/odom", qos)
             self.__pc_publisher = self.create_publisher(PointCloud2, '/lidar', qos)
+            #self.__cost_publisher = self.create_publisher(PointCloud2, '/scanner/cloud', qos)#costil publisher)
             # self.__pc_publisher_rear = self.create_publisher(PointCloud2, '/lidar_rear', qos)
             self.create_subscription(PointStamped, '/vehicle/gps', self.__on_gps_message, qos)
             self.create_subscription(Image, '/vehicle/range_finder', self.__on_range_message, qos)
@@ -73,6 +74,7 @@ class NodeSensorsWebots(Node):
             p = data
             p.header.stamp = self.get_clock().now().to_msg()
             p.header.frame_id = 'base_link'
+            #self.__cost_publisher.publish(p)
             self.__pc_publisher.publish(p)
         except  Exception as err:
             self._logger.error(''.join(traceback.TracebackException.from_exception(err).format()))

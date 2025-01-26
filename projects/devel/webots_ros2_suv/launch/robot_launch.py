@@ -44,6 +44,49 @@ def get_ros2_nodes(*args):
     with open(urdf, 'r') as infp:
         robot_desc = infp.read()
 
+    pointcloud_to_laserscan_node = Node(
+            package='pointcloud_to_laserscan',
+            executable='pointcloud_to_laserscan_node',
+            name='pointcloud_to_laserscan',
+            output='screen',
+            parameters=[
+                {
+                    'min_height': -2.20,               # Minimum height of the point cloud to include
+                    'max_height': 1.0,               # Maximum height of the point cloud to include
+                    'angle_min': -3.14,              # Minimum angle (radians)
+                    'angle_max': 3.14,               # Maximum angle (radians)
+                    'angle_increment': 0.01,         # Angle increment (radians)
+                    'range_min': 1.0,                # Minimum range (meters)
+                    'range_max': 20.0,               # Maximum range (meters)
+                    'use_inf': True,                 # Use `inf` for no return
+                    'output_frame': 'base_link',     # Frame for the LaserScan
+                    'target_frame': '',              # Optional target frame
+                    'transform_tolerance': 0.1       # Transform tolerance
+                }
+            ],
+            remappings=[
+                ('cloud_in', '/lidar'),
+                ('scan', '/scan')
+            ]
+        )
+    slam_toolbox_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen',
+        parameters=[{
+            'base_frame':'base_link',
+            'resolution':0.5
+        }],
+        respawn=True
+    )
+    # nav2_node = Node(
+    #         package='nav2_bringup',
+    #         executable='navigation_launch',
+    #         parameters=[{
+    #             'use_sim_time':USE_SIM_TIME,
+    #             'params_file': '../config/nav2_params.yaml'}],
+    #     )
     state_publisher_node = Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
@@ -58,6 +101,7 @@ def get_ros2_nodes(*args):
         ["map", "odom"],
         ["base_link", "range_finder"]
     ]
+
     static_transform_nodes = []
     for s in static_transforms:
         static_transform_nodes.append(Node(
@@ -72,6 +116,9 @@ def get_ros2_nodes(*args):
         state_publisher_node,
         node_sensors_webots,
         node_ego_controller,
+        pointcloud_to_laserscan_node,
+        slam_toolbox_node
+        # nav2_node,
     ] + static_transform_nodes
 
 
