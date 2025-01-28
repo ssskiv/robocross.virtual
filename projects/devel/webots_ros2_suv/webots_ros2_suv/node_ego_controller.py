@@ -190,7 +190,7 @@ class NodeEgoController(Node):
 
     def __on_cmd_message(self, data):
         linear_velocity = data.linear.x
-        angular_velocity = -data.angular.z
+        angular_velocity = -1.25*data.angular.z
         
         # Compute steering angle based on Ackermann kinematics
         if abs(angular_velocity) == 0:  # Handle straight motion

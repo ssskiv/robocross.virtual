@@ -69,17 +69,6 @@ def get_ros2_nodes(*args):
                 ('scan', '/scan')
             ]
         )
-    slam_toolbox_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='slam_toolbox',
-        output='screen',
-        parameters=[{
-            'base_frame':'base_link',
-            'resolution':0.5
-        }],
-        respawn=True
-    )
     # nav2_node = Node(
     #         package='nav2_bringup',
     #         executable='navigation_launch',
@@ -117,9 +106,24 @@ def get_ros2_nodes(*args):
         node_sensors_webots,
         node_ego_controller,
         pointcloud_to_laserscan_node,
-        slam_toolbox_node
         # nav2_node,
     ] + static_transform_nodes
+
+def get_ros2_control_spawners(*args):
+    # Declare here all nodes that must be restarted at simulation reset
+    slam_toolbox_node = Node(
+        package='slam_toolbox',
+        executable='async_slam_toolbox_node',
+        name='slam_toolbox',
+        output='screen',
+        parameters=[{
+            'base_frame':'base_link',
+            'resolution':0.5
+        }]
+    )
+    return [
+                slam_toolbox_node
+    ]
 
 
 def generate_launch_description():
@@ -151,4 +155,11 @@ def generate_launch_description():
              on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())],
             )
         ),
-    ] + get_ros2_nodes())
+        launch.actions.RegisterEventHandler(
+        
+        event_handler=launch.event_handlers.OnProcessExit(
+            target_action=vehicle_driver,
+            on_exit=get_ros2_control_spawners,
+        )
+    )
+    ] + get_ros2_nodes() + get_ros2_control_spawners())
