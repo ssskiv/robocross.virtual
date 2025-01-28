@@ -143,6 +143,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
+            #default_value='tesla_world.wbt',
             default_value='robocross_gazelle.wbt',
             description='Robocross simulation world'
         ),

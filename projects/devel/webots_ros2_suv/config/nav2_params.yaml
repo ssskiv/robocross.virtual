@@ -249,7 +249,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 2.0
-        inflation_radius: 2.0
+        inflation_radius: 2.5
       always_send_full_costmap: True
 
 map_server:
@@ -257,12 +257,12 @@ map_server:
     use_sim_time: True
     # Overridden in launch by the "map" launch configuration or provided default value.
     # To use in yaml, remove the default "map" value in the tb3_simulation_launch.py file & provide full path to map below.
-    yaml_filename: ""
+    yaml_filename: "/ulstu/ros2_ws/src/webots_ros2_suv/maps/map.yaml"
 
 map_saver:
   ros__parameters:
     use_sim_time: True
-    save_map_timeout: 5.0
+    save_map_timeout: 2.0
     free_thresh_default: 0.25
     occupied_thresh_default: 0.65
     map_subscribe_transient_local: True
@@ -289,7 +289,7 @@ planner_server:
       analytic_expansion_max_length: 3.0    # For Hybrid/Lattice nodes: The maximum length of the analytic expansion to be considered valid to prevent unsafe shortcutting (in meters). This should be scaled with minimum turning radius and be no less than 4-5x the minimum radius
       analytic_expansion_max_cost: 200   # For Hybrid/Lattice nodes: The maximum single cost for any part of an analytic expansion to contain and be valid (except when necessary on approach to goal)
       analytic_expansion_max_cost_override: true # For Hybrid/Lattice nodes: Whether or not to override the maximum cost setting if within critical distance to goal (ie probably required). If expansion is within 2*pi*min_r of the goal, then it will override the max cost if ``false``.
-      minimum_turning_radius: 3.0        # For Hybrid/Lattice nodes: minimum turning radius in m of path / vehicle
+      minimum_turning_radius: 5.50        # For Hybrid/Lattice nodes: minimum turning radius in m of path / vehicle
       reverse_penalty: 3.0                # For Reeds-Shepp model: penalty to apply if motion is reversing, must be => 1
       change_penalty: 0.3                 # For Hybrid nodes: penalty to apply if motion is changing directions, must be >= 0
       non_straight_penalty: 1.20          # For Hybrid nodes: penalty to apply if motion is non-straight, must be => 1
