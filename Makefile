@@ -1,15 +1,15 @@
 -MAKEFLAGS+=--silent
-UID:=$(shell id -u)
+UID:=$(shell id +-u)
 DOCKER_DIR:=$(shell dirname $(realpath $(firstword $(MAKEFILE_LIST))))
 #PROJECT_DIR:=$(shell dirname ${DOCKER_DIR})
 PROJECT_DIR:=${DOCKER_DIR}
 NVIDIA_GPU:=$(shell (docker info | grep Runtimes | grep nvidia 1> /dev/null && command -v nvidia-smi 1>/dev/null 2>/dev/null && nvidia-smi | grep Processes 1>/dev/null 2>/dev/null) && echo '--runtime nvidia --gpus all' || echo '')
 IMAGE=ulstu
-FLAVOR ?= devel
+FLAVOR ?= test
 ROBOT_PANEL_PORT ?= 8008
 VS_PORT ?= 31415
 WEBOTS_STREAM_PORT ?= 1234
-DISPLAY=:1
+DISPLAY=:0
 
 .PHONY: all
 
@@ -85,7 +85,7 @@ td:
 
 start-code-server:
 	docker exec -d -it ulstu-${FLAVOR} bash -c 'pgrep code-server || code-server /ulstu/ros2_ws' && \
-	xdg-open 'localhost:31415?folder=/ulstu/ros2_ws'
+	xdg-open 'http://localhost:31415?folder=/ulstu/ros2_ws'
 
 stop-code-server:
 	docker exec -it ulstu-${FLAVOR} pkill -f code-server

@@ -1,4 +1,11 @@
 
+# Запуск решения в конце!!!
+[запуск](https://github.com/ssskiv/robocross.virtual/tree/navigation?tab=readme-ov-file#%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-beta)
+!  
+!  
+!  
+!  
+!  
 # Среда для подготовки программных решений для соревнований по робототехнике в среде симуляции
 
  Инструкция разработчика [тут](docs/readme.md)
@@ -113,3 +120,13 @@ ros2 launch webots_ros2_suv robot_launch.py
 
 ## Установка через docker в MacOS m1 не поддерживается, т.к. отсутствует linux дистрибутив webots arm
 https://everythingdevops.dev/building-x86-images-on-an-apple-m1-chip/
+
+# Запуск решения (beta)
+в терминале контейнера выполняем следующее:  
+```sh
+cd ~/ros2_ws/src/webots_ros2_suv/scripts
+./setup.sh #обязательно
+./run_ros2.sh # or run_nav2.sh  run_ros2.sh  run_rviz2.sh
+```  
+чтобы запустить решение, запускаем в 3-ех терминалах каждый вариант(nav2, ros2, rviz2)  
+в будущем изменим под запуск из одного скрипта
