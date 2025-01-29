@@ -276,12 +276,12 @@ class NodeEgoController(Node):
                         green_cnt += 1
             #cv2.putText(img, f'green_cnt {green_cnt}', (x-100, y+60), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
             if green_cnt > 30:
-                #cv2.putText(img, f'GREEN LIGHT!', (x-100, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
+                cv2.putText(img, f'GREEN LIGHT!', (x-100, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
                 msg.data = 1
         self.__trafficlight_publisher.publish(msg)
 
 
-        #cv2.imshow("Camera", img)
+        cv2.imshow("Camera", img)
         cv2.waitKey(0)
 
         t2 = time.time()
