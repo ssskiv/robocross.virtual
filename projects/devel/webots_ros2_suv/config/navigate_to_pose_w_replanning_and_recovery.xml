@@ -1,35 +1,71 @@
-
-<!--
-  This Behavior Tree replans the global path periodically at 1 Hz and it also has
-  recovery actions specific to planning / control as well as general system issues.
-  This will be continuous if a kinematically valid planner is selected.
--->
-<root main_tree_to_execute="MainTree">
+<?xml version="1.0" encoding="UTF-8"?>
+<root BTCPP_format="3"
+      main_tree_to_execute="MainTree">
   <BehaviorTree ID="MainTree">
-    <RecoveryNode number_of_retries="60" name="NavigateRecovery">
-      <PipelineSequence name="NavigateWithReplanning">
+    <RecoveryNode number_of_retries="100">
+      <PipelineSequence>
         <RateController hz="1.0">
-          <RecoveryNode number_of_retries="1" name="ComputePathToPose">
-            <ComputePathToPose goal="{goal}" path="{path}" planner_id="GridBased"/>
-            <ClearEntireCostmap name="ClearGlobalCostmap-Context" service_name="global_costmap/clear_entirely_global_costmap"/>
+          <RecoveryNode name="ComputePathToPose"
+                        number_of_retries="1">
+            <ComputePathToPose goal="{goal}"
+                               path="{path}"
+                               planner_id="GridBased"/>
+            <ClearEntireCostmap name="ClearGlobalCostmap-Context"
+                                service_name="global_costmap/clear_entirely_global_costmap"/>
           </RecoveryNode>
         </RateController>
-        <RecoveryNode number_of_retries="1" name="FollowPath">
-          <FollowPath path="{path}" controller_id="FollowPath"/>
-          <ClearEntireCostmap name="ClearLocalCostmap-Context" service_name="local_costmap/clear_entirely_local_costmap"/>
+        <RecoveryNode name="FollowPath"
+                      number_of_retries="1">
+          <FollowPath path="{path}"
+                      controller_id="FollowPath"/>
+          <ClearEntireCostmap name="ClearLocalCostmap-Context"
+                              service_name="local_costmap/clear_entirely_local_costmap"/>
         </RecoveryNode>
       </PipelineSequence>
-      <ReactiveFallback name="RecoveryFallback">
+      <RoundRobin>
         <GoalUpdated/>
-        <RoundRobin name="RecoveryActions">
-          <Sequence name="ClearingActions">
-            <ClearEntireCostmap name="ClearLocalCostmap-Subtree" service_name="local_costmap/clear_entirely_local_costmap"/>
-            <ClearEntireCostmap name="ClearGlobalCostmap-Subtree" service_name="global_costmap/clear_entirely_global_costmap"/>
-          </Sequence>
-          <BackUp backup_dist="1.50" backup_speed="10.5"/>
-          <Wait wait_duration="1.9"/>
-        </RoundRobin>
-      </ReactiveFallback>
+        <BackUp backup_dist="1.0"
+                backup_speed="30.0"/>
+      </RoundRobin>
     </RecoveryNode>
   </BehaviorTree>
+
+  <!-- Description of Node Models (used by Groot) -->
+  <TreeNodesModel>
+    <Action ID="BackUp"
+            editable="true">
+      <input_port name="backup_dist"/>
+      <input_port name="backup_speed"/>
+    </Action>
+    <Action ID="ClearEntireCostmap"
+            editable="true">
+      <input_port name="service_name"/>
+    </Action>
+    <Action ID="ComputePathToPose"
+            editable="true">
+      <input_port name="goal"/>
+      <input_port name="path"/>
+      <input_port name="planner_id"/>
+    </Action>
+    <Action ID="FollowPath"
+            editable="true">
+      <input_port name="path"/>
+      <input_port name="controller_id"/>
+    </Action>
+    <Action ID="GoalUpdated"
+            editable="true"/>
+    <Control ID="PipelineSequence"
+             editable="true"/>
+    <Decorator ID="RateController"
+               editable="true">
+      <input_port name="hz"/>
+    </Decorator>
+    <Control ID="RecoveryNode"
+             editable="true">
+      <input_port name="number_of_retries"/>
+    </Control>
+    <Control ID="RoundRobin"
+             editable="true"/>
+  </TreeNodesModel>
+
 </root>
