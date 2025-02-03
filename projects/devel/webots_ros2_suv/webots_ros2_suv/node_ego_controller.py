@@ -76,6 +76,17 @@ class NodeEgoController(Node):
             self.__trafficlight_publisher = self.create_publisher(Int32, 'traffic_light', 1)
             self.start_web_server()
 
+
+            self.traffic_light_state = 0  
+            self.flag = False
+            # Создаем подписчика на топик /traffic_light
+            self.traffic_light_subscriber = self.create_subscription(
+                Int32,  # Тип сообщения
+                '/traffic_light',  # Имя топика
+                self.__on_traffic_light_message,  # Функция-обработчик
+                10  # Очередь сообщений (QoS)
+            )
+
         except Exception as err:
             self._logger.error(
                 "".join(traceback.TracebackException.from_exception(err).format())
@@ -221,13 +232,24 @@ class NodeEgoController(Node):
 
         range_image = image / SENSOR_DEPTH
 
+       
+    def __on_traffic_light_message(self, msg):
+        """Функция обработки сообщений из /traffic_light."""
+        self.traffic_light_state = msg.data  # Сохраняем текущее значение светофора
+        #self._logger.info(f"Получено значение светофора: {self.traffic_light_state}")
+
+
     def drive(self):
-        self.__world_model.command_message.speed = float(self.speed)
-        self.__world_model.command_message.steering_angle = float(
-            self.steering_angle 
-        )
-        #self._logger.info(f"Driving to {self.speed} speed, {self.steering_angle} angle")
-        self.__ackermann_publisher.publish(self.__world_model.command_message)
+        
+        if self.traffic_light_state == 1:
+            self.flag = True
+        if self.flag:    
+            self.__world_model.command_message.speed = float(self.speed)
+            self.__world_model.command_message.steering_angle = float(
+                self.steering_angle 
+            )
+            #self._logger.info(f"Driving to {self.speed} speed, {self.steering_angle} angle")
+            self.__ackermann_publisher.publish(self.__world_model.command_message)
 
     # @timeit
     def __on_image_message(self, data: sensor_msgs.msg.Image):
@@ -248,7 +270,7 @@ class NodeEgoController(Node):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         contours,hierarchy = cv2.findContours(mask1, 1, 2)
-        print("Number of contours detected:", len(contours))
+        #print("Number of contours detected:", len(contours))
 
         msg = Int32()
         msg.data = 0
@@ -281,9 +303,9 @@ class NodeEgoController(Node):
         self.__trafficlight_publisher.publish(msg)
 
 
-        cv2.imshow("Camera", img)
+        #cv2.imshow("Camera", img)
         cv2.waitKey(0)
-
+        #---------------------------------------------- ANTITIMOFEY ----------------------------------------
         t2 = time.time()
 
         delta = t2 - t1
