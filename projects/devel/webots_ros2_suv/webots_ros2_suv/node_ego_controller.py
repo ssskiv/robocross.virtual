@@ -46,7 +46,7 @@ class NodeEgoController(Node):
 
             self.__world_model = WorldModel()
             self.__ws = None
-
+            self.speed_loc = 1.0
             package_dir = get_package_share_directory("webots_ros2_suv")
 
             self.create_subscription(Odometry, "/odom", self.__on_odom_message, qos)
@@ -95,7 +95,10 @@ class NodeEgoController(Node):
         self.publish_obstacles(obstacles)
         if obstacles.size > 0:#if any obstacles found
             closest_obstacle, distance = self.detect_closest_obstacle(obstacles)
-
+            # if distance<25.0:
+            #     self.speed_loc=0.25
+            # else:
+            #     self.speed_loc=1.0
             #self._logger.info(f"{len(obstacles)} obstacles detected!")
             #setting self.drive() parameters 
             #self.steering_angle = (1 / (closest_obstacle[0]**0.25*closest_obstacle[1])) * TURN_SENS
@@ -109,7 +112,7 @@ class NodeEgoController(Node):
             #self._logger.info(
             #    f"Closest object in [{closest_obstacle[0]},{closest_obstacle[1]}, {closest_obstacle[2]}]"
             #)
-            #self._logger.info(f"Distance = {distance}")
+            # self._logger.info(f"Distance = {distance}, self.speed_loc = {self.speed_loc}")
             self.publish_closest(
                 obstacles[
                     (obstacles[:, 0] == closest_obstacle[0])
@@ -131,8 +134,8 @@ class NodeEgoController(Node):
         max_distance=30.0,
         min_height=-2.2,
         max_height=0,
-        min_y=-5.0,
-        max_y=5.0):
+        min_y=-1.0,
+        max_y=1.0):
         xyz = np.stack([points["x"], points["y"], points["z"]], axis=-1)
         x = xyz[:, 0]
         y = xyz[:, 1]
@@ -204,7 +207,9 @@ class NodeEgoController(Node):
         
         # Limit steering angle within allowed bounds
         self.steering_angle = max(-np.pi/4, min(np.pi/4, steering_angle))
-        self.speed = SPEED_SENS * linear_velocity
+        if linear_velocity<0:
+            self.steering_angle = -  self.steering_angle * -1
+        self.speed = SPEED_SENS * linear_velocity * self.speed_loc
 
         #self.steering_angle=data.angular.z
 
