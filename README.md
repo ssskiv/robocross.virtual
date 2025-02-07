@@ -130,6 +130,11 @@ cd ~/ros2_ws/src/webots_ros2_suv/scripts
 ```  
 чтобы запустить решение, запускаем в 3-ех терминалах каждый вариант(nav2, ros2, rviz2)  
 в будущем изменим под запуск из одного скрипта
+#### Изменения под запуск одного скрипта
+```sh
+cd ~/ros2_ws/src/webots_ros2_suv/scripts
+./run_all.sh
+```
 
 # Распознавание светофора
 Распознавание светофора происходит в функции ```def __on_image_message(self, data: sensor_msgs.msg.Image):```
