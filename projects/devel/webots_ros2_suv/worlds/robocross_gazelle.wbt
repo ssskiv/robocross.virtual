@@ -37,7 +37,7 @@ TexturedBackground {
 Solid {
   children [
     GenericTrafficLight {
-      translation 18.96 -11.73 0
+      translation 20.96 -11.73 0
       rotation 0 0 1 3.14159
       state "green"
     }
