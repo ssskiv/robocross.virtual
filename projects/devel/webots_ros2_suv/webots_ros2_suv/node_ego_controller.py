@@ -255,7 +255,7 @@ class NodeEgoController(Node):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         contours,hierarchy = cv2.findContours(mask1, 1, 2)
-        print("Number of contours detected:", len(contours))
+        #print("Number of contours detected:", len(contours))
 
         msg = Int32()
         msg.data = 0

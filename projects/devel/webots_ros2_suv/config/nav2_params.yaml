@@ -219,14 +219,14 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 5.0
+      update_frequency: 15.0
+      publish_frequency: 15.0
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
       footprint: "[ [4.45, -0.95], [4.45, 0.95], [-1.65, 0.95], [-1.65, -0.95] ]"
       robot_radius: 2.0
-      resolution: 0.5
+      resolution: 1.0
       track_unknown_space: false
       #unknown_cost_value: 0
       plugins: ["static_layer", "obstacle_layer", "inflation_layer"]
@@ -251,7 +251,7 @@ global_costmap:
       inflation_layer:
         plugin: "nav2_costmap_2d::InflationLayer"
         cost_scaling_factor: 2.0
-        inflation_radius: 1.5
+        inflation_radius: 3.0
       always_send_full_costmap: True
       
 lifecycle_manager:

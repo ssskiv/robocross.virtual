@@ -370,7 +370,7 @@ def get_ros2_nodes(*args):
             'minimum_travel_distance': 0.01,
             #'map_start_pose': [2.430, -4.760, 0.439765],#TODO
             'map_start_at_dock': True,
-            'resolution':0.5
+            'resolution':1.0
         }]
     )
 
