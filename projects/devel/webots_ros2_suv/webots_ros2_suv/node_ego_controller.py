@@ -97,10 +97,10 @@ class NodeEgoController(Node):
         self.publish_obstacles(obstacles)
         if obstacles.size > 0:#if any obstacles found
             closest_obstacle, distance = self.detect_closest_obstacle(obstacles)
-            # if distance<25.0:
-            #     self.speed_loc=0.25
-            # else:
-            #     self.speed_loc=1.0
+            if distance<10.0:
+                self.speed_loc=0.1#(distance/5)
+            else:
+                self.speed_loc=1.0
             #self._logger.info(f"{len(obstacles)} obstacles detected!")
             #setting self.drive() parameters 
             #self.steering_angle = (1 / (closest_obstacle[0]**0.25*closest_obstacle[1])) * TURN_SENS
@@ -134,8 +134,8 @@ class NodeEgoController(Node):
         points,
         min_distance=0,
         max_distance=30.0,
-        min_height=-2.2,
-        max_height=0,
+        min_height=-2.0,
+        max_height=1.0,
         min_y=-1.0,
         max_y=1.0):
         xyz = np.stack([points["x"], points["y"], points["z"]], axis=-1)
@@ -208,7 +208,7 @@ class NodeEgoController(Node):
                 steering_angle = 0.0
         
         # Limit steering angle within allowed bounds
-        self.steering_angle = max(-np.pi/4, min(np.pi/4, steering_angle))
+        self.steering_angle = max(-np.pi/4, min(np.pi/4, steering_angle/(self.speed_loc)))
         if linear_velocity<0:
             self.steering_angle = -  self.steering_angle * -1
         self.speed = SPEED_SENS * linear_velocity * self.speed_loc
@@ -255,7 +255,7 @@ class NodeEgoController(Node):
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
         contours,hierarchy = cv2.findContours(mask1, 1, 2)
-        print("Number of contours detected:", len(contours))
+        #print("Number of contours detected:", len(contours))
 
         msg = Int32()
         msg.data = 0

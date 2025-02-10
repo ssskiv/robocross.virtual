@@ -362,10 +362,13 @@ def get_ros2_nodes(*args):
         parameters=[{
             'base_frame':'base_link',
             'use_map_saver': True,
+            #'loop_match_minimum_chain_size': 2,
             #'use_scan_matching': True,
             'map_file_name':'map',
             'map_update_interval': 0.1,
-            'scan_buffer_maximum_scan_distance': 25.0,
+            'use_scan_matching': False,
+            'loop_search_space_dimension': 15.0,
+            'scan_buffer_maximum_scan_distance': 50.0,
             'max_laser_range': 250.0,
             'minimum_travel_distance': 0.01,
             #'map_start_pose': [2.430, -4.760, 0.439765],#TODO
@@ -427,7 +430,7 @@ def generate_launch_description():
             'world',
             #default_value='tesla_world.wbt',
             # default_value='no_obstacles.wbt',
-            default_value='robocross_gazelle.wbt',
+            default_value='hard_test.wbt',
             description='Robocross simulation world'
         ),
         webots,
