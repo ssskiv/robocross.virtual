@@ -14,7 +14,6 @@ from launch_ros.substitutions import FindPackageShare
 from webots_ros2_driver.webots_launcher import WebotsLauncher, Ros2SupervisorLauncher
 from webots_ros2_driver.webots_controller import WebotsController
 from nav2_common.launch import RewrittenYaml
-<<<<<<< HEAD
 from launch.actions import DeclareLaunchArgument, GroupAction, SetEnvironmentVariable
 from launch.conditions import IfCondition
 from launch.substitutions import LaunchConfiguration, PythonExpression
@@ -22,15 +21,12 @@ from launch_ros.actions import LoadComposableNodes, SetParameter
 from launch_ros.descriptions import ComposableNode, ParameterFile
 #from launch.conditions import IfCondition#, UnlessCondition
 
-=======
->>>>>>> origin/integretion
 
 PACKAGE_NAME = 'webots_ros2_suv'
 USE_SIM_TIME = True
 
 def get_ros2_nodes(*args):
     pkg_share = FindPackageShare(package=PACKAGE_NAME).find(PACKAGE_NAME)
-<<<<<<< HEAD
     package_dir = get_package_share_directory(PACKAGE_NAME)
     #bringup_dir = get_package_share_directory('nav2_bringup')
 
@@ -121,9 +117,6 @@ def get_ros2_nodes(*args):
     
 
     
-=======
-
->>>>>>> origin/integretion
     node_sensors_webots = Node(
         package=PACKAGE_NAME,
         executable='node_sensors_webots',
@@ -172,20 +165,10 @@ def get_ros2_nodes(*args):
                 ('scan', '/scan')
             ]
         )
-<<<<<<< HEAD
     
 
 
 
-=======
-    # nav2_node = Node(
-    #         package='nav2_bringup',
-    #         executable='navigation_launch',
-    #         parameters=[{
-    #             'use_sim_time':USE_SIM_TIME,
-    #             'params_file': '../config/nav2_params.yaml'}],
-    #     )
->>>>>>> origin/integretion
     state_publisher_node = Node(
             package='robot_state_publisher',
             executable='robot_state_publisher',
@@ -210,7 +193,6 @@ def get_ros2_nodes(*args):
             arguments=["0", "0", "0", "0", "0", "0"] + s,
             parameters=[{'use_sim_time': USE_SIM_TIME}]
         ))
-<<<<<<< HEAD
     load_nodes = GroupAction(
         condition=IfCondition(PythonExpression(['not ', use_composition])),
         actions=[
@@ -410,15 +392,11 @@ def get_ros2_nodes(*args):
     # Add the actions to launch all of the navigation nodes
     ld.add_action(load_nodes)
     ld.add_action(load_composable_nodes)
-=======
-
->>>>>>> origin/integretion
     return [
         state_publisher_node,
         node_sensors_webots,
         node_ego_controller,
         pointcloud_to_laserscan_node,
-<<<<<<< HEAD
         #load_nodes,
         #load_composable_nodes,
         ld,
@@ -428,26 +406,6 @@ def get_ros2_nodes(*args):
 # def get_ros2_control_spawners(*args):
 #     # Declare here all nodes that must be restarted at simulation reset
 #     pass
-=======
-        # nav2_node,
-    ] + static_transform_nodes
-
-def get_ros2_control_spawners(*args):
-    # Declare here all nodes that must be restarted at simulation reset
-    slam_toolbox_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='slam_toolbox',
-        output='screen',
-        parameters=[{
-            'base_frame':'base_link',
-            'resolution':0.5
-        }]
-    )
-    return [
-                slam_toolbox_node
-    ]
->>>>>>> origin/integretion
 
 
 def generate_launch_description():
@@ -468,10 +426,7 @@ def generate_launch_description():
         DeclareLaunchArgument(
             'world',
             #default_value='tesla_world.wbt',
-<<<<<<< HEAD
             # default_value='no_obstacles.wbt',
-=======
->>>>>>> origin/integretion
             default_value='robocross_gazelle.wbt',
             description='Robocross simulation world'
         ),
@@ -484,7 +439,6 @@ def generate_launch_description():
              on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())],
             )
         ),
-<<<<<<< HEAD
     #     launch.actions.RegisterEventHandler(
         
     #     event_handler=launch.event_handlers.OnProcessExit(
@@ -493,13 +447,3 @@ def generate_launch_description():
     #     )
     # )
     ] + get_ros2_nodes() )#+ get_ros2_control_spawners())
-=======
-        launch.actions.RegisterEventHandler(
-        
-        event_handler=launch.event_handlers.OnProcessExit(
-            target_action=vehicle_driver,
-            on_exit=get_ros2_control_spawners,
-        )
-    )
-    ] + get_ros2_nodes() + get_ros2_control_spawners())
->>>>>>> origin/integretion

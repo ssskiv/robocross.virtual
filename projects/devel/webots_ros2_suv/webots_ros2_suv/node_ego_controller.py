@@ -29,10 +29,7 @@ from .lib.world_model import WorldModel
 from robot_interfaces.srv import PoseService
 from robot_interfaces.msg import EgoPose
 import sensor_msgs_py.point_cloud2 as pc2
-<<<<<<< HEAD
-=======
 from std_msgs.msg import Int32
->>>>>>> origin/integretion
 
 
 SENSOR_DEPTH = 40
@@ -50,11 +47,7 @@ class NodeEgoController(Node):
 
             self.__world_model = WorldModel()
             self.__ws = None
-<<<<<<< HEAD
             self.speed_loc = 1.0
-=======
-
->>>>>>> origin/integretion
             package_dir = get_package_share_directory("webots_ros2_suv")
 
             self.create_subscription(Odometry, "/odom", self.__on_odom_message, qos)
@@ -80,10 +73,7 @@ class NodeEgoController(Node):
             self.__ackermann_publisher = self.create_publisher(
                 AckermannDrive, "cmd_ackermann", 1
             )
-<<<<<<< HEAD
-=======
             self.__trafficlight_publisher = self.create_publisher(Int32, 'traffic_light', 1)
->>>>>>> origin/integretion
             self.start_web_server()
 
         except Exception as err:
@@ -107,14 +97,10 @@ class NodeEgoController(Node):
         self.publish_obstacles(obstacles)
         if obstacles.size > 0:#if any obstacles found
             closest_obstacle, distance = self.detect_closest_obstacle(obstacles)
-<<<<<<< HEAD
             # if distance<25.0:
             #     self.speed_loc=0.25
             # else:
             #     self.speed_loc=1.0
-=======
-
->>>>>>> origin/integretion
             #self._logger.info(f"{len(obstacles)} obstacles detected!")
             #setting self.drive() parameters 
             #self.steering_angle = (1 / (closest_obstacle[0]**0.25*closest_obstacle[1])) * TURN_SENS
@@ -128,11 +114,7 @@ class NodeEgoController(Node):
             #self._logger.info(
             #    f"Closest object in [{closest_obstacle[0]},{closest_obstacle[1]}, {closest_obstacle[2]}]"
             #)
-<<<<<<< HEAD
             # self._logger.info(f"Distance = {distance}, self.speed_loc = {self.speed_loc}")
-=======
-            #self._logger.info(f"Distance = {distance}")
->>>>>>> origin/integretion
             self.publish_closest(
                 obstacles[
                     (obstacles[:, 0] == closest_obstacle[0])
@@ -154,13 +136,8 @@ class NodeEgoController(Node):
         max_distance=30.0,
         min_height=-2.2,
         max_height=0,
-<<<<<<< HEAD
         min_y=-1.0,
         max_y=1.0):
-=======
-        min_y=-5.0,
-        max_y=5.0):
->>>>>>> origin/integretion
         xyz = np.stack([points["x"], points["y"], points["z"]], axis=-1)
         x = xyz[:, 0]
         y = xyz[:, 1]
@@ -232,13 +209,9 @@ class NodeEgoController(Node):
         
         # Limit steering angle within allowed bounds
         self.steering_angle = max(-np.pi/4, min(np.pi/4, steering_angle))
-<<<<<<< HEAD
         if linear_velocity<0:
             self.steering_angle = -  self.steering_angle * -1
         self.speed = SPEED_SENS * linear_velocity * self.speed_loc
-=======
-        self.speed = SPEED_SENS * linear_velocity
->>>>>>> origin/integretion
 
         #self.steering_angle=data.angular.z
 
@@ -262,25 +235,17 @@ class NodeEgoController(Node):
         self.__ackermann_publisher.publish(self.__world_model.command_message)
 
     # @timeit
-<<<<<<< HEAD
     def __on_image_message(self, data):
         image = data.data
         image = np.frombuffer(image, dtype=np.uint8).reshape(
             (data.height, data.width, 4)
         )
-=======
-    def __on_image_message(self, data: sensor_msgs.msg.Image):
-        image = data.data
-        image = np.frombuffer(image, dtype=np.uint8).reshape((data.height, data.width, 4))
->>>>>>> origin/integretion
         analyze_image = Image.fromarray(cv2.cvtColor(image, cv2.COLOR_RGBA2RGB))
 
         self.__world_model.rgb_image = np.asarray(analyze_image)
 
         t1 = time.time()
         # TODO: put your code here
-<<<<<<< HEAD
-=======
         #---------------------------------------------- ANTITIMOFEY ----------------------------------------
         hsv = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
         mask1 = cv2.inRange(hsv, (99,23,0), (121,67,36))
@@ -323,27 +288,18 @@ class NodeEgoController(Node):
         self.__trafficlight_publisher.publish(msg)
 
 
-        cv2.imshow("Camera", img)
-        cv2.waitKey(0)
+        #cv2.imshow("Camera", img)
+        #cv2.waitKey(0)
 
->>>>>>> origin/integretion
         t2 = time.time()
 
         delta = t2 - t1
         fps = 1 / delta if delta > 0 else 100
-<<<<<<< HEAD
         #self._logger.info(f"Current image FPS: {fps}")
 
         pos = self.__world_model.get_current_position()
 
         # self.drive()
-=======
-        #self._logger.info(f"Current FPS: {fps}")
-
-        pos = self.__world_model.get_current_position()
-
-        #self.drive()
->>>>>>> origin/integretion
 
         if self.__ws is not None:
             self.__ws.update_model(self.__world_model)
