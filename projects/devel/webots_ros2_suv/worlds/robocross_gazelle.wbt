@@ -14,7 +14,11 @@ EXTERNPROTO "../protos/GazelleNext.proto"
 
 WorldInfo {
   ERP 0.6
+<<<<<<< HEAD
   basicTimeStep 10
+=======
+  basicTimeStep 60
+>>>>>>> origin/integretion
   FPS 30
   optimalThreadCount 4
   lineScale 1
@@ -24,7 +28,10 @@ WorldInfo {
         8
       ]
       softCFM 1e-05
+<<<<<<< HEAD
       maxContactJoints 13
+=======
+>>>>>>> origin/integretion
     }
   ]
 }
@@ -937,8 +944,11 @@ Solid {
         }
       }
       roadBoundingObject TRUE
+<<<<<<< HEAD
       rightBorderBoundingObject TRUE
       leftBorderBoundingObject TRUE
+=======
+>>>>>>> origin/integretion
     }
     DEF road Road {
       name "road(2)"
@@ -961,8 +971,11 @@ Solid {
         }
       }
       roadBoundingObject TRUE
+<<<<<<< HEAD
       rightBorderBoundingObject TRUE
       leftBorderBoundingObject TRUE
+=======
+>>>>>>> origin/integretion
     }
     Solid {
       translation 10 0 0.005
@@ -1070,7 +1083,11 @@ PlasticBarrel {
   translation 112.888 -12.3338 0.1
   name "PlasticBarrel(3)"
 }
+<<<<<<< HEAD
 DEF Gazelle1 GazelleNext {
+=======
+GazelleNext {
+>>>>>>> origin/integretion
   translation 2.43536 -4.76087 0.5
   controller "<extern>"
   supervisor TRUE
@@ -1181,4 +1198,8 @@ PlasticBarrel {
 PlasticBarrel {
   translation 19.7383 -4.98268 0.1
   name "PlasticBarrel(4)"
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/integretion
