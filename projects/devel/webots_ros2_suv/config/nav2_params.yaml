@@ -190,7 +190,7 @@ local_costmap:
       height: 30
       resolution: 0.5
       footprint: "[ [4.45, -0.95], [4.45, 0.95], [-1.65, 0.95], [-1.65, -0.95] ]"
-      #robot_radius: 4.0
+      #robot_radius: 4.0  1
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
