@@ -190,7 +190,7 @@ local_costmap:
       height: 30
       resolution: 0.5
       footprint: "[ [4.45, -0.95], [4.45, 0.95], [-1.65, 0.95], [-1.65, -0.95] ]"
-      #robot_radius: 4.0
+      #robot_radius: 4.0  1
       plugins: ["obstacle_layer", "inflation_layer"]
       obstacle_layer:
         plugin: "nav2_costmap_2d::ObstacleLayer"
@@ -219,8 +219,8 @@ local_costmap:
 global_costmap:
   global_costmap:
     ros__parameters:
-      update_frequency: 5.0
-      publish_frequency: 5.0
+      update_frequency: 15.0
+      publish_frequency: 15.0
       global_frame: map
       robot_base_frame: base_link
       use_sim_time: True
