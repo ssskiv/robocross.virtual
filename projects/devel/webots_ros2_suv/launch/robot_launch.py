@@ -2,16 +2,14 @@
 import os
 import pathlib
 import launch
-import yaml
-import xacro
-from launch.substitutions import Command, LaunchConfiguration
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.substitutions import  LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
 from launch.substitutions.path_join_substitution import PathJoinSubstitution
 from launch import LaunchDescription
 from ament_index_python.packages import get_package_share_directory
 from launch_ros.actions import Node
 from launch_ros.substitutions import FindPackageShare
-from webots_ros2_driver.webots_launcher import WebotsLauncher, Ros2SupervisorLauncher
+from webots_ros2_driver.webots_launcher import WebotsLauncher
 from webots_ros2_driver.webots_controller import WebotsController
 from nav2_common.launch import RewrittenYaml
 from launch.actions import DeclareLaunchArgument, GroupAction, SetEnvironmentVariable
@@ -28,6 +26,11 @@ USE_SIM_TIME = True
 def get_ros2_nodes(*args):
     pkg_share = FindPackageShare(package=PACKAGE_NAME).find(PACKAGE_NAME)
     package_dir = get_package_share_directory(PACKAGE_NAME)
+    urdf = os.path.join(
+        package_dir,
+        os.path.join(package_dir, pathlib.Path(os.path.join(package_dir, 'resource', 'gazelle.urdf'))))
+    with open(urdf, 'r') as infp:
+        robot_desc = infp.read()
     #bringup_dir = get_package_share_directory('nav2_bringup')
 
     namespace = LaunchConfiguration('namespace')
@@ -46,7 +49,6 @@ def get_ros2_nodes(*args):
                        'planner_server',
                        'behavior_server',
                        'bt_navigator',
-                    #    'map_server',
                        'waypoint_follower',
                        'velocity_smoother']
     
@@ -63,14 +65,6 @@ def get_ros2_nodes(*args):
     param_substitutions = {
         'use_sim_time': use_sim_time,
         'autostart': autostart}
-
-    configured_params = ParameterFile(
-        RewrittenYaml(
-            source_file=params_file,
-            root_key=namespace,
-            param_rewrites=param_substitutions,
-            convert_types=True),
-        allow_substs=True)
 
     stdout_linebuf_envvar = SetEnvironmentVariable(
         'RCUTILS_LOGGING_BUFFERED_STREAM', '1')
@@ -115,6 +109,13 @@ def get_ros2_nodes(*args):
         'log_level', default_value='info',
         description='log level')
     
+    configured_params = ParameterFile(
+        RewrittenYaml(
+            source_file=params_file,
+            root_key=namespace,
+            param_rewrites=param_substitutions,
+            convert_types=True),
+        allow_substs=True)
 
     
     node_sensors_webots = Node(
@@ -132,42 +133,6 @@ def get_ros2_nodes(*args):
         output='screen' ,
         parameters=[{'use_sim_time': USE_SIM_TIME}]
     )
-
-    package_dir = get_package_share_directory(PACKAGE_NAME)
-    urdf = os.path.join(
-        package_dir,
-        os.path.join(package_dir, pathlib.Path(os.path.join(package_dir, 'resource', 'gazelle.urdf'))))
-    with open(urdf, 'r') as infp:
-        robot_desc = infp.read()
-
-    pointcloud_to_laserscan_node = Node(
-            package='pointcloud_to_laserscan',
-            executable='pointcloud_to_laserscan_node',
-            name='pointcloud_to_laserscan',
-            output='screen',
-            parameters=[
-                {
-                    'min_height': -2.20,               # Minimum height of the point cloud to include
-                    'max_height': 1.0,               # Maximum height of the point cloud to include
-                    'angle_min': -3.14,              # Minimum angle (radians)
-                    'angle_max': 3.14,               # Maximum angle (radians)
-                    'angle_increment': 0.01,         # Angle increment (radians)
-                    'range_min': 1.0,                # Minimum range (meters)
-                    'range_max': 20.0,               # Maximum range (meters)
-                    'use_inf': True,                 # Use `inf` for no return
-                    'output_frame': 'base_link',     # Frame for the LaserScan
-                    'target_frame': '',              # Optional target frame
-                    'transform_tolerance': 0.1       # Transform tolerance
-                }
-            ],
-            remappings=[
-                ('cloud_in', '/lidar'),
-                ('scan', '/scan')
-            ]
-        )
-    
-
-
 
     state_publisher_node = Node(
             package='robot_state_publisher',
@@ -193,6 +158,31 @@ def get_ros2_nodes(*args):
             arguments=["0", "0", "0", "0", "0", "0"] + s,
             parameters=[{'use_sim_time': USE_SIM_TIME}]
         ))
+         
+    load_tool_nodes=GroupAction(
+        actions=[
+            Node(
+                package='pointcloud_to_laserscan',
+                executable='pointcloud_to_laserscan_node',
+                name='pointcloud_to_laserscan',
+                output='screen',
+                parameters=[configured_params],
+                arguments=['--ros-args', '--log-level', log_level],
+                remappings=remappings+[
+                    ('cloud_in', '/lidar'),
+                    ('scan', '/scan')
+                                    ]
+            ),
+            Node(
+                package='slam_toolbox',
+                executable='async_slam_toolbox_node',
+                name='slam_toolbox',
+                output='screen',
+                parameters=[configured_params],
+                arguments=['--ros-args', '--log-level', log_level]
+                )
+                ]
+    )   
     load_nodes = GroupAction(
         condition=IfCondition(PythonExpression(['not ', use_composition])),
         actions=[
@@ -245,17 +235,6 @@ def get_ros2_nodes(*args):
                 parameters=[configured_params],
                 arguments=['--ros-args', '--log-level', log_level],
                 remappings=remappings),
-            # Node(
-            #     package='nav2_map_server',
-            #     executable='map_server',
-            #     name='map_server',
-            #     output='screen',
-            #     respawn=use_respawn,
-            #     respawn_delay=2.0,
-            #     parameters=[configured_params],
-            #     #condition=IfCondition(PythonExpression(['"', use_slam, '" == "false"'])),
-            #     arguments=['--ros-args', '--log-level', log_level],
-            #     remappings=remappings),
             Node(
                 package='nav2_waypoint_follower',
                 executable='waypoint_follower',
@@ -325,12 +304,6 @@ def get_ros2_nodes(*args):
                 name='bt_navigator',
                 parameters=[configured_params],
                 remappings=remappings),
-            # ComposableNode(
-            #     package='nav2_map_server',
-            #     plugin='nav2_map_server::MapServer',
-            #     name='map_server',
-            #     parameters=[configured_params],
-            #     remappings=remappings),
             ComposableNode(
                 package='nav2_waypoint_follower',
                 plugin='nav2_waypoint_follower::WaypointFollower',
@@ -353,29 +326,6 @@ def get_ros2_nodes(*args):
                              'node_names': lifecycle_nodes}]),
         ],
     )]) 
-    slam_toolbox_node = Node(
-        package='slam_toolbox',
-        executable='async_slam_toolbox_node',
-        name='slam_toolbox',
-        output='screen',
-        #condition=IfCondition(PythonExpression(['"', use_slam, '" == "true"'])),
-        parameters=[{
-            'base_frame':'base_link',
-            'use_map_saver': True,
-            #'loop_match_minimum_chain_size': 2,
-            #'use_scan_matching': True,
-            'map_file_name':'map',
-            'map_update_interval': 0.1,
-            'use_scan_matching': False,
-            'loop_search_space_dimension': 15.0,
-            'scan_buffer_maximum_scan_distance': 50.0,
-            'max_laser_range': 250.0,
-            'minimum_travel_distance': 0.01,
-            #'map_start_pose': [2.430, -4.760, 0.439765],#TODO
-            'map_start_at_dock': True,
-            'resolution':1.0
-        }]
-    )
 
     ld = LaunchDescription()
 
@@ -393,23 +343,15 @@ def get_ros2_nodes(*args):
     ld.add_action(declare_use_respawn_cmd)
     ld.add_action(declare_log_level_cmd)
     # Add the actions to launch all of the navigation nodes
+    ld.add_action(load_tool_nodes)
     ld.add_action(load_nodes)
     ld.add_action(load_composable_nodes)
     return [
         state_publisher_node,
         node_sensors_webots,
         node_ego_controller,
-        pointcloud_to_laserscan_node,
-        #load_nodes,
-        #load_composable_nodes,
         ld,
-        slam_toolbox_node,
     ] + static_transform_nodes
-
-# def get_ros2_control_spawners(*args):
-#     # Declare here all nodes that must be restarted at simulation reset
-#     pass
-
 
 def generate_launch_description():
     package_dir = get_package_share_directory(PACKAGE_NAME)
@@ -428,9 +370,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            #default_value='tesla_world.wbt',
-            # default_value='no_obstacles.wbt',
-            default_value='hard_test.wbt',
+            default_value='robocross_gazelle.wbt',
             description='Robocross simulation world'
         ),
         webots,
@@ -441,12 +381,5 @@ def generate_launch_description():
              target_action=webots,
              on_exit=[launch.actions.EmitEvent(event=launch.events.Shutdown())],
             )
-        ),
-    #     launch.actions.RegisterEventHandler(
-        
-    #     event_handler=launch.event_handlers.OnProcessExit(
-    #         target_action=vehicle_driver,
-    #         on_exit=get_ros2_control_spawners,
-    #     )
-    # )
-    ] + get_ros2_nodes() )#+ get_ros2_control_spawners())
+        )
+    ] + get_ros2_nodes() )
