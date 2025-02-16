@@ -8,7 +8,7 @@ import threading
 import sensor_msgs.msg
 from std_msgs.msg import Header
 from nav_msgs.msg import Odometry
-from geometry_msgs.msg import Twist
+from geometry_msgs.msg import Twist, PoseStamped, Quaternion
 from ackermann_msgs.msg import AckermannDrive
 from rclpy.qos import qos_profile_sensor_data, QoSReliabilityPolicy
 from rclpy.node import Node
@@ -63,7 +63,9 @@ class NodeEgoController(Node):
             )
             self.__trafficlight_publisher = self.create_publisher(Int32, 'traffic_light', 1)
             
-            
+            self.goal_publisher = self.create_publisher(PoseStamped, "/goal_pose", 10) 
+
+
             self.start_web_server()
 
             
@@ -77,6 +79,9 @@ class NodeEgoController(Node):
                 10  # Очередь сообщений (QoS)
             )
 
+            self.create_timer(0.5, self.send_goal_pose_once)
+            
+
         except Exception as err:
             self._logger.error(
                 "".join(traceback.TracebackException.from_exception(err).format())
@@ -85,6 +90,26 @@ class NodeEgoController(Node):
     def start_web_server(self):
         self.__ws = MapWebServer(log=self._logger.info)
         threading.Thread(target=start_web_server, args=[self.__ws]).start()
+    
+    def send_goal_pose_once(self):
+        """Отправляет цель один раз при старте программы"""
+        self.publish_goal_pose(161.751, -47.599, 0.0, 0.0, 0.0, -0.212, 0.977)
+        self._logger.info("Целевая точка отправлена!")
+
+    def publish_goal_pose(self, x, y, z, qx, qy, qz, qw):
+        """Публикация точки в /goal_pose"""
+        goal_msg = PoseStamped()
+        goal_msg.header.stamp = self.get_clock().now().to_msg()
+        goal_msg.header.frame_id = "map"
+
+        goal_msg.pose.position.x = x
+        goal_msg.pose.position.y = y
+        goal_msg.pose.position.z = z
+
+        goal_msg.pose.orientation = Quaternion(x=qx, y=qy, z=qz, w=qw)
+
+        self.goal_publisher.publish(goal_msg)
+        #self._logger.info(f"Опубликован goal_pose: x={x}, y={y}, qz={qz}, qw={qw}")
 
     def __on_lidar_message(self, data):
         pc_data = pc2.read_points(data, field_names=("x", "y", "z"), skip_nans=True)
