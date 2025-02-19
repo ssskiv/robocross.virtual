@@ -39,6 +39,10 @@ class NodeEgoController(Node):
             package_dir = get_package_share_directory("webots_ros2_suv")
 
             self.create_subscription(Odometry, "/odom", self.__on_odom_message, qos)
+            
+            self.x1 = 0
+            self.y1 = 0
+            
             self.create_subscription(
                 sensor_msgs.msg.Image,
                 "/vehicle/camera/image_color",
@@ -91,9 +95,11 @@ class NodeEgoController(Node):
     def start_web_server(self):
         self.__ws = MapWebServer(log=self._logger.info)
         threading.Thread(target=start_web_server, args=[self.__ws]).start()
+
     
     def send_goal_pose_once(self):
         """Отправляет цель один раз при старте программы"""
+
         if self.first_goal == False:
             self.publish_goal_pose(164.398, -41.854, 0.0, 0.0, 0.0, -0.281, 0.959)
             self._logger.info('---------------False-------------')
@@ -102,6 +108,8 @@ class NodeEgoController(Node):
             self._logger.info('----------------True--------------')
 
         self._logger.info("Целевая точка отправлена!")
+        self._logger.info(str(self.x1))
+        self._logger.info(str(self.y1))
 
     def publish_goal_pose(self, x, y, z, qx, qy, qz, qw):
         """Публикация точки в /goal_pose"""
@@ -210,7 +218,7 @@ class NodeEgoController(Node):
             self.steering_angle = -  self.steering_angle * -1
         self.speed = SPEED_SENS * linear_velocity * self.speed_loc
         
-        if abs(self.speed) < 1:
+        if abs(self.speed) < 1 and (abs(164.398 + self.x1) < 25) and (abs(-41.854 - self.y1) < 10):
             self.first_goal = True
 
         self.drive()
@@ -329,7 +337,8 @@ class NodeEgoController(Node):
         self.__world_model.update_car_pos(lat, lon, orientation)
         if self.__ws is not None:
             self.__ws.update_model(self.__world_model)
-
+        self.x1 = data.pose.pose.orientation.x * 1000000
+        self.y1 = data.pose.pose.orientation.y * 100000
 
 def main(args=None):
     try:
