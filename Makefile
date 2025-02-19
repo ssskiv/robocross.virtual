@@ -43,7 +43,7 @@ run:
 		-e DISPLAY=${DISPLAY} \
 		-v ~/.Xauthority:/ulstu/.host/.Xauthority:ro \
 		-e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
-      	-e DISPLAY=:1 \
+#-e DISPLAY=:1 \
 		--device=/dev/dxg \
 		-it --gpus all --device /dev/dri:/dev/dri \
 		-e LD_LIBRARY_PATH=/usr/lib/wsl/lib \
