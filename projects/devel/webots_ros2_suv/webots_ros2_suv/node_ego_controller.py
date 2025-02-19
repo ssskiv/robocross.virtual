@@ -78,8 +78,9 @@ class NodeEgoController(Node):
                 self.__on_traffic_light_message,  # Функция-обработчик
                 10  # Очередь сообщений (QoS)
             )
-
-            self.create_timer(0.5, self.send_goal_pose_once)
+            self.first_goal = False
+            self.create_timer(2, self.send_goal_pose_once)
+            #self.send_goal_pose_once()
             
 
         except Exception as err:
@@ -93,7 +94,13 @@ class NodeEgoController(Node):
     
     def send_goal_pose_once(self):
         """Отправляет цель один раз при старте программы"""
-        self.publish_goal_pose(161.751, -47.599, 0.0, 0.0, 0.0, -0.212, 0.977)
+        if self.first_goal == False:
+            self.publish_goal_pose(164.398, -41.854, 0.0, 0.0, 0.0, -0.281, 0.959)
+            self._logger.info('---------------False-------------')
+        elif self.first_goal == True:
+            self.publish_goal_pose(0.380, -0.278, 0.0, 0.0, 0.0, 0.999, 0.027)
+            self._logger.info('----------------True--------------')
+
         self._logger.info("Целевая точка отправлена!")
 
     def publish_goal_pose(self, x, y, z, qx, qy, qz, qw):
@@ -202,6 +209,9 @@ class NodeEgoController(Node):
         if linear_velocity<0:
             self.steering_angle = -  self.steering_angle * -1
         self.speed = SPEED_SENS * linear_velocity * self.speed_loc
+        
+        if abs(self.speed) < 1:
+            self.first_goal = True
 
         self.drive()
 
