@@ -1,4 +1,4 @@
-devel/
+# devel/
 logs/
 log/
 build/
@@ -23,6 +23,9 @@ devel_isolated/
 .local/
 .ros/
 .rviz2/
+.dotnet/
+.gnupg/
+.vscode-server/
 *.bash_history
 *.Xauthority
 *.profile
@@ -61,4 +64,4 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
-/.*/
+# /.*/
