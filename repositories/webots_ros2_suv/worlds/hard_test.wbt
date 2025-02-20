@@ -1151,7 +1151,7 @@ PlasticBarrel {
   name "PlasticBarrel(2)"
 }
 PlasticBarrel {
-  translation 31.5432 -0.512183 0.1
+  translation 20.3 2.77 0.1
   name "PlasticBarrel(1)"
 }
 PlasticBarrel {
@@ -1159,7 +1159,7 @@ PlasticBarrel {
   name "PlasticBarrel(6)"
 }
 PlasticBarrel {
-  translation 103.37 -2.41209 0.1
+  translation 103.37 -11.31209 0.1
   name "PlasticBarrel(8)"
 }
 PlasticBarrel {
@@ -1167,7 +1167,7 @@ PlasticBarrel {
   name "PlasticBarrel(10)"
 }
 PlasticBarrel {
-  translation 75.7109 5.10587 0.1
+  translation 75.7109 -4.90587 0.1
   name "PlasticBarrel(9)"
 }
 PlasticBarrel {
@@ -1175,7 +1175,7 @@ PlasticBarrel {
   name "PlasticBarrel(7)"
 }
 PlasticBarrel {
-  translation 31.507 0.309897 0.1
+  translation 20.2 1.93 0.1
   name "PlasticBarrel(5)"
 }
 PlasticBarrel {

@@ -142,3 +142,5 @@ test -f /ulstu/.host/.Xauthority && \
 
 source ~/ros2_ws/install/setup.bash
 export DISPLAY=:0
+source ~/ros2_ws/install/setup.bash
+source ~/ros2_ws/install/setup.bash

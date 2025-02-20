@@ -1,0 +1,8 @@
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[user]
+	email = ivanioshpa@gmail.com
+	name = Ivan Ioshpa
+[credential]
+	helper = "!f() { /ulstu/.vscode-server/bin/33fc5a94a3f99ebe7087e8fe79fbe1d37a251016/node /tmp/vscode-remote-containers-0af61e16-3e3b-4d32-b6ce-31d2072b67cc.js git-credential-helper $*; }; f"

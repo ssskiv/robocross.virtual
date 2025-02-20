@@ -3,6 +3,7 @@ logs/
 log/
 build/
 bin/
+Groot2/
 
 msg_gen/
 srv_gen/
@@ -60,3 +61,4 @@ qtcreator-*
 
 # Catkin custom files
 CATKIN_IGNORE
+/.*/
