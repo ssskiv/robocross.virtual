@@ -104,7 +104,7 @@ class NodeEgoController(Node):
             self.publish_goal_pose(164.398, -41.854, 0.0, 0.0, 0.0, -0.281, 0.959)
             self._logger.info('---------------False-------------')
         elif self.first_goal == True:
-            self.publish_goal_pose(1.580, -0.278, 0.0, 0.0, 0.0, 0.999, 0.027)
+            self.publish_goal_pose(2.380, -0.278, 0.0, 0.0, 0.0, 0.999, 0.027)
             self._logger.info('----------------True--------------')
 
         self._logger.info("Целевая точка отправлена!")

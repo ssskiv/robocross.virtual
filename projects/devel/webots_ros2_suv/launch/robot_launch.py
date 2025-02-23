@@ -370,7 +370,7 @@ def generate_launch_description():
     return LaunchDescription([
         DeclareLaunchArgument(
             'world',
-            default_value='hard_test.wbt',
+            default_value='robocross_gazelle.wbt',
             description='Robocross simulation world'
         ),
         webots,
