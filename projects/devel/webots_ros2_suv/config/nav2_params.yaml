@@ -134,7 +134,7 @@ controller_server:
       movement_time_allowance: 10.0
     goal_checker:
       plugin: "nav2_controller::SimpleGoalChecker"
-      xy_goal_tolerance: 3.5
+      xy_goal_tolerance: 4.0
       yaw_goal_tolerance: 0.25
       stateful: True
     FollowPath:
@@ -296,7 +296,7 @@ planner_server:
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_smac_planner/SmacPlannerHybrid"
-      tolerance: 1.0 # tolerance for planning if unable to reach exact pose, in meters
+      tolerance: 0.5 # tolerance for planning if unable to reach exact pose, in meters
       downsample_costmap: false # whether or not to downsample the map
       downsampling_factor: 2 # multiplier for the resolution of the costmap layer (e.g. 2 on a 5cm costmap would be 10cm)
       allow_unknown: true # allow traveling in unknown space

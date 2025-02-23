@@ -98,7 +98,7 @@ class NodeEgoController(Node):
             self.publish_goal_pose(164.398, -41.854, 0.0, 0.0, 0.0, -0.281, 0.959)
             self._logger.info('---------------False-------------')
         elif self.first_goal == True:
-            self.publish_goal_pose(0.380, -0.278, 0.0, 0.0, 0.0, 0.999, 0.027)
+            self.publish_goal_pose(1.580, -0.278, 0.0, 0.0, 0.0, 0.999, 0.027)
             self._logger.info('----------------True--------------')
 
         self._logger.info("Целевая точка отправлена!")
@@ -129,7 +129,7 @@ class NodeEgoController(Node):
         if obstacles.size > 0:#if any obstacles found
             closest_obstacle, distance = self.detect_closest_obstacle(obstacles)
             if distance<10.0:
-                self.speed_loc=0.5
+                self.speed_loc=distance/10.0
             else:
                 self.speed_loc=1.0
             self.publish_closest(
@@ -193,7 +193,7 @@ class NodeEgoController(Node):
 
     def __on_cmd_message(self, data):
         linear_velocity = data.linear.x
-        angular_velocity = -1.25*data.angular.z
+        angular_velocity = -1.0*data.angular.z
         
         # Compute steering angle based on Ackermann kinematics
         if abs(angular_velocity) == 0:  # Handle straight motion
