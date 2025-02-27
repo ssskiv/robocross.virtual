@@ -218,7 +218,7 @@ class NodeEgoController(Node):
             self.steering_angle = -  self.steering_angle * -1
         self.speed = SPEED_SENS * linear_velocity * self.speed_loc
         
-        if abs(self.speed) < 1 and (abs(164.398 + self.x1) < 25) and (abs(-41.854 - self.y1) < 10):
+        if abs(self.speed) < 1 and ((164.398 - self.x1)**2 + (-41.854 - self.y1)**2)**0.5 < 4.0:
             self.first_goal = True
 
         self.drive()
@@ -308,8 +308,8 @@ class NodeEgoController(Node):
         self.__trafficlight_publisher.publish(msg)
 
 
-        #cv2.imshow("Camera", img)
-        #cv2.waitKey(0)
+        # cv2.imshow("Camera", img)
+        # cv2.waitKey(0)
 
         t2 = time.time()
 
@@ -337,8 +337,8 @@ class NodeEgoController(Node):
         self.__world_model.update_car_pos(lat, lon, orientation)
         if self.__ws is not None:
             self.__ws.update_model(self.__world_model)
-        self.x1 = data.pose.pose.orientation.x * 1000000
-        self.y1 = data.pose.pose.orientation.y * 100000
+        self.x1 = data.pose.pose.position.x 
+        self.y1 = data.pose.pose.position.y 
 
 def main(args=None):
     try:
