@@ -9,7 +9,7 @@ FLAVOR ?= test
 ROBOT_PANEL_PORT ?= 8008
 VS_PORT ?= 31415
 WEBOTS_STREAM_PORT ?= 1234
-DISPLAY=:0
+DISPLAY=:1
 
 .PHONY: all
 
@@ -43,7 +43,6 @@ run:
 		-e DISPLAY=${DISPLAY} \
 		-v ~/.Xauthority:/ulstu/.host/.Xauthority:ro \
 		-e WAYLAND_DISPLAY=$WAYLAND_DISPLAY \
-#-e DISPLAY=:1 \
 		--device=/dev/dxg \
 		-it --gpus all --device /dev/dri:/dev/dri \
 		-e LD_LIBRARY_PATH=/usr/lib/wsl/lib \
